@@ -121,7 +121,7 @@ class SLIM_BPR_Cython(object):
         self.W_sparse = None  # TODO ADDED TO save Memory, adjust
 
     def _initialize_incremental_model(self):
-        self.S_incremental = self.cythonEpoch.get_S()
+        self.S_incremental = int(self.cythonEpoch.get_S())
         self.S_best = self.S_incremental.copy()
 
     def _update_incremental_model(self):
