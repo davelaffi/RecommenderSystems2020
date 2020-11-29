@@ -3,8 +3,9 @@ import pathos.pools as pp
 import multiprocessing
 from functools import partial
 import numpy as np
-import scipy.sparse as sps
+import scipy.sparse as sp
 from sklearn.linear_model import ElasticNet
+
 
 
 class SLIMElasticNetRecommender(object):
@@ -82,7 +83,7 @@ class SLIMElasticNetRecommender(object):
 
     def fit(self, URM):
 
-        self.URM_train = sps.csc_matrix(URM)
+        self.URM_train = sp.csc_matrix(URM)
 
         n_items = self.URM_train.shape[1]
         
@@ -106,7 +107,7 @@ class SLIMElasticNetRecommender(object):
             rows.extend(rows_)
             cols.extend(cols_)
 
-        self.W_sparse = sps.csc_matrix((values, (rows, cols)), shape=(n_items, n_items), dtype=np.float32)
+        self.W_sparse = sp.csc_matrix((values, (rows, cols)), shape=(n_items, n_items), dtype=np.float32)
 
     def get_expected_ratings(self, user_id):
         user_profile = self.URM_train[user_id]
@@ -115,7 +116,7 @@ class SLIMElasticNetRecommender(object):
         # # EDIT
         return expected_ratings
 
-    def recommend(self,user_id, at=10):
+    def recommend(self,user_id,urm_train: sp.csr_matrix,at=10):
         # compute the scores using the dot product
         scores = self.get_expected_ratings(user_id)
         user_profile = self.URM_train[user_id].indices

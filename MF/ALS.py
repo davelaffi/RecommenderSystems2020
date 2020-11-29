@@ -44,7 +44,6 @@ class AlternatingLeastSquare:
     def recommend(self, user_id, urm_train: sp.csr_matrix, at=10):
         
         expected_ratings = self.get_expected_ratings(user_id)
-        print(expected_ratings)
         recommended_items = np.flip(np.argsort(expected_ratings), 0)
 
         unseen_items_mask = np.in1d(recommended_items, urm_train[user_id].indices,

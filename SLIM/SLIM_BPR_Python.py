@@ -9,7 +9,7 @@ Updated on 28 November 2020
 
 import time
 import numpy as np
-import scipy.sparse as sps
+import scipy.sparse as sp
 
 #from Base.BaseSimilarityMatrixRecommender import BaseItemSimilarityMatrixRecommender
 from Base.Recommender_utils import similarityMatrixTopK
@@ -32,7 +32,7 @@ class SLIM_BPR_Python(object):
 
     def fit(self,URM):
         
-        self.URM_train = sps.csc_matrix(URM)
+        self.URM_train = sp.csc_matrix(URM)
         self.n_users = self.URM_train.shape[0]
         self.n_items = self.URM_train.shape[1]
         # Initialize similarity with zero values
@@ -46,7 +46,7 @@ class SLIM_BPR_Python(object):
         print("Train completed in {:.2f} minutes".format(float(time.time()-start_time_train)/60))
 
         self.W_sparse = similarityMatrixTopK(self.item_item_S, k=self.topK, verbose=False)
-        self.W_sparse = sps.csr_matrix(self.W_sparse)
+        self.W_sparse = sp.csr_matrix(self.W_sparse)
 
 
     def _run_epoch(self, n_epoch):
@@ -116,3 +116,14 @@ class SLIM_BPR_Python(object):
 
         # # EDIT
         return expected_ratings
+    
+    def recommend(self,user_id,urm_train: sp.csr_matrix,at=10):
+        # compute the scores using the dot product
+        scores = self.get_expected_ratings(user_id)
+        user_profile = self.URM_train[user_id].indices
+        scores[user_profile] = 0
+
+        # rank items
+        recommended_items = np.flip(np.argsort(scores), 0)
+
+        return recommended_items[:at]
