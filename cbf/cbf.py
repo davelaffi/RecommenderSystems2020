@@ -1,6 +1,7 @@
 import numpy as np
+import scipy.sparse as sp
 
-from Compute_Similarity_Python import Compute_Similarity_Python
+from Base.Similarity.Compute_Similarity_Python import Compute_Similarity_Python
 
 
 class ContentBasedFiltering(object):
