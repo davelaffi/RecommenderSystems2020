@@ -16,79 +16,41 @@ class BaseRecommender(object):
 
     RECOMMENDER_NAME = "Recommender_Base_Class"
 
-    def __init__(self, URM_train, verbose=True):
-
-        super(BaseRecommender, self).__init__()
-
-        self.URM_train = check_matrix(URM_train.copy(), 'csr', dtype=np.float32)
-        self.URM_train.eliminate_zeros()
-
-        self.n_users, self.n_items = self.URM_train.shape
-        self.verbose = verbose
-
-        self.filterTopPop = False
-        self.filterTopPop_ItemsID = np.array([], dtype=np.int)
-
-        self.items_to_ignore_flag = False
-        self.items_to_ignore_ID = np.array([], dtype=np.int)
-
-        self._cold_user_mask = np.ediff1d(self.URM_train.indptr) == 0
-
-        if self._cold_user_mask.any():
-            self._print("URM Detected {} ({:.2f} %) cold users.".format(
-                self._cold_user_mask.sum(), self._cold_user_mask.sum()/self.n_users*100))
+    def __init__(self,URM):
+        #super(BaseRecommender, self).__init__()
+        self.URM_train = URM
+        self.W_sparse = None
 
 
-        self._cold_item_mask = np.ediff1d(self.URM_train.tocsc().indptr) == 0
+    def fit(self,knn, shrink, similarity):
+        """
+        To be implemented in child classes
+        """
 
-        if self._cold_item_mask.any():
-            self._print("URM Detected {} ({:.2f} %) cold items.".format(
-                self._cold_item_mask.sum(), self._cold_item_mask.sum()/self.n_items*100))
+    def get_expected_ratings(self,user_id):
+        self.RECS = self.URM_train.dot(self.W_sparse)
+        expected_ratings = self.RECS[user_id].todense()
+        return np.squeeze(np.asarray(expected_ratings))
 
+    def _compute_item_score(self, user_id_array, items_to_compute=None):
+        """
+        URM_train and W_sparse must have the same format, CSR
+        :param user_id_array:
+        :param items_to_compute:
+        :return:
+        """
 
-    def _get_cold_user_mask(self):
-        return self._cold_user_mask
+        user_profile_array = self.URM_train[user_id_array]
 
-    def _get_cold_item_mask(self):
-        return self._cold_item_mask
+        if items_to_compute is not None:
+            item_scores = - np.ones((len(user_id_array), self.URM_train.shape[1]), dtype=np.float32)*np.inf
+            item_scores_all = user_profile_array.dot(self.W_sparse).toarray()
+            item_scores[:, items_to_compute] = item_scores_all[:, items_to_compute]
+        else:
+            item_scores = user_profile_array.dot(self.W_sparse).toarray()
 
-
-    def _print(self, string):
-        if self.verbose:
-            print("{}: {}".format(self.RECOMMENDER_NAME, string))
-
-    def fit(self):
-        pass
-
-    def get_URM_train(self):
-        return self.URM_train.copy()
-
-    def set_items_to_ignore(self, items_to_ignore):
-        self.items_to_ignore_flag = True
-        self.items_to_ignore_ID = np.array(items_to_ignore, dtype=np.int)
-
-    def reset_items_to_ignore(self):
-        self.items_to_ignore_flag = False
-        self.items_to_ignore_ID = np.array([], dtype=np.int)
-
-
-    #########################################################################################################
-    ##########                                                                                     ##########
-    ##########                     COMPUTE AND FILTER RECOMMENDATION LIST                          ##########
-    ##########                                                                                     ##########
-    #########################################################################################################
-
-
-    def _remove_TopPop_on_scores(self, scores_batch):
-        scores_batch[:, self.filterTopPop_ItemsID] = -np.inf
-        return scores_batch
-
-
-    def _remove_custom_items_on_scores(self, scores_batch):
-        scores_batch[:, self.items_to_ignore_ID] = -np.inf
-        return scores_batch
-
-
+        return item_scores
+    
     def _remove_seen_on_scores(self, user_id, scores):
 
         assert self.URM_train.getformat() == "csr", "Recommender_Base_Class: URM_train is not CSR, this will cause errors in filtering seen items"
@@ -98,22 +60,9 @@ class BaseRecommender(object):
         scores[seen] = -np.inf
         return scores
 
-
-    def _compute_item_score(self, user_id_array, items_to_compute = None):
-        """
-
-        :param user_id_array:       array containing the user indices whose recommendations need to be computed
-        :param items_to_compute:    array containing the items whose scores are to be computed.
-                                        If None, all items are computed, otherwise discarded items will have as score -np.inf
-        :return:                    array (len(user_id_array), n_items) with the score.
-        """
-        raise NotImplementedError("BaseRecommender: compute_item_score not assigned for current recommender, unable to compute prediction scores")
-
-
-    def recommend(self, user_id_array, cutoff = None, remove_seen_flag=True, items_to_compute = None,
-                  remove_top_pop_flag = False, remove_custom_items_flag = False, return_scores = False):
-
-        # If is a scalar transform it in a 1-cell array
+    def recommend(self, user_id_array, cutoff=10, remove_seen_flag=True, items_to_compute = None, remove_top_pop_flag=False, remove_custom_items_flag=False, return_scores=True):
+        
+       # If is a scalar transform it in a 1-cell array
         if np.isscalar(user_id_array):
             user_id_array = np.atleast_1d(user_id_array)
             single_user = True
@@ -145,12 +94,6 @@ class BaseRecommender(object):
             #
             # ranking_list.append(ranking)
 
-
-        if remove_top_pop_flag:
-            scores_batch = self._remove_TopPop_on_scores(scores_batch)
-
-        if remove_custom_items_flag:
-            scores_batch = self._remove_custom_items_on_scores(scores_batch)
 
         # relevant_items_partition is block_size x cutoff
         relevant_items_partition = (-scores_batch).argpartition(cutoff, axis=1)[:,0:cutoff]
@@ -187,34 +130,24 @@ class BaseRecommender(object):
 
         else:
             return ranking_list
-
-
-
-    #########################################################################################################
-    ##########                                                                                     ##########
-    ##########                                LOAD AND SAVE                                        ##########
-    ##########                                                                                     ##########
-    #########################################################################################################
-
+    
+    def get_URM_train(self):
+        return self.URM_train
 
 
     def save_model(self, folder_path, file_name = None):
-        raise NotImplementedError("BaseRecommender: save_model not implemented")
-
-
-
-
-    def load_model(self, folder_path, file_name = None):
 
         if file_name is None:
             file_name = self.RECOMMENDER_NAME
 
-        self._print("Loading model from file '{}'".format(folder_path + file_name))
+        self._print("Saving model in file '{}'".format(folder_path + file_name))
+
+        data_dict_to_save = {"W_sparse": self.W_sparse}
 
         dataIO = DataIO(folder_path=folder_path)
-        data_dict = dataIO.load_data(file_name=file_name)
+        dataIO.save_data(file_name=file_name, data_dict_to_save = data_dict_to_save)
 
-        for attrib_name in data_dict.keys():
-             self.__setattr__(attrib_name, data_dict[attrib_name])
+        self._print("Saving complete")
 
-        self._print("Loading complete")
+    def _print(self, string):
+        print("{}: {}".format(self.RECOMMENDER_NAME, string))

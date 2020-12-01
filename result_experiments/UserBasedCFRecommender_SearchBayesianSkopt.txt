@@ -1,0 +1,99 @@
+SearchBayesianSkopt: Config 0 Exception. Config: {'knn': 944, 'shrink': 51, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Config 1 Exception. Config: {'knn': 5, 'shrink': 1000, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Config 2 Exception. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Config 3 Exception. Config: {'knn': 7, 'shrink': 5, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Config 4 Exception. Config: {'knn': 992, 'shrink': 1, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Search complete. Best config is None: None
+SearchBayesianSkopt: Config 0 Exception. Config: {'knn': 643, 'shrink': 397, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Config 1 Exception. Config: {'knn': 5, 'shrink': 1000, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Config 2 Exception. Config: {'knn': 996, 'shrink': 8, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Config 3 Exception. Config: {'knn': 13, 'shrink': 1, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Config 4 Exception. Config: {'knn': 1000, 'shrink': 998, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\matte\OneDrive\Documents\GitHub\Recommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'knn'
+
+SearchBayesianSkopt: Search complete. Best config is None: None
+SearchBayesianSkopt: New best config found. Config 0: {'knn': 301, 'shrink': 939, 'similarity': 'cosine'} - results: ROC_AUC: 0.1169872, PRECISION: 0.0219891, PRECISION_RECALL_MIN_DEN: 0.0926647, RECALL: 0.0909795, MAP: 0.0415248, MRR: 0.0837256, NDCG: 0.0628655, F1: 0.0354179, HIT_RATE: 0.2198907, ARHR: 0.0913128, NOVELTY: 0.0047867, AVERAGE_POPULARITY: 0.1249478, DIVERSITY_MEAN_INTER_LIST: 0.9749107, DIVERSITY_HERFINDAHL: 0.9974698, COVERAGE_ITEM: 0.3754764, COVERAGE_ITEM_CORRECT: 0.0197883, COVERAGE_USER: 0.5756889, COVERAGE_USER_CORRECT: 0.1044419, DIVERSITY_GINI: 0.1115307, SHANNON_ENTROPY: 10.8714659, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'knn': 301, 'shrink': 939, 'similarity': 'cosine'} - results:
+CUTOFF: 10 - ROC_AUC: 0.1222979, PRECISION: 0.0236937, PRECISION_RECALL_MIN_DEN: 0.0934260, RECALL: 0.0911845, MAP: 0.0431291, MRR: 0.0881205, NDCG: 0.0647242, F1: 0.0376138, HIT_RATE: 0.2369373, ARHR: 0.0966038, NOVELTY: 0.0048058, AVERAGE_POPULARITY: 0.1228504, DIVERSITY_MEAN_INTER_LIST: 0.9757647, DIVERSITY_HERFINDAHL: 0.9975569, COVERAGE_ITEM: 0.4028874, COVERAGE_ITEM_CORRECT: 0.0229066, COVERAGE_USER: 0.6261482, COVERAGE_USER_CORRECT: 0.1209261, DIVERSITY_GINI: 0.1190414, SHANNON_ENTROPY: 10.9503021, 
+
+SearchBayesianSkopt: Config 1 is suboptimal. Config: {'knn': 1000, 'shrink': 0, 'similarity': 'cosine'} - results: ROC_AUC: 0.0596899, PRECISION: 0.0116721, PRECISION_RECALL_MIN_DEN: 0.0506315, RECALL: 0.0498914, MAP: 0.0215897, MRR: 0.0413783, NDCG: 0.0329926, F1: 0.0189183, HIT_RATE: 0.1167213, ARHR: 0.0451154, NOVELTY: 0.0058754, AVERAGE_POPULARITY: 0.0154486, DIVERSITY_MEAN_INTER_LIST: 0.9971805, DIVERSITY_HERFINDAHL: 0.9996963, COVERAGE_ITEM: 0.5225794, COVERAGE_ITEM_CORRECT: 0.0186718, COVERAGE_USER: 0.5756889, COVERAGE_USER_CORRECT: 0.0563735, DIVERSITY_GINI: 0.2668959, SHANNON_ENTROPY: 12.9765742, 
+SearchBayesianSkopt: Config 2 is suboptimal. Config: {'knn': 5, 'shrink': 0, 'similarity': 'cosine'} - results: ROC_AUC: 0.0617777, PRECISION: 0.0108197, PRECISION_RECALL_MIN_DEN: 0.0468957, RECALL: 0.0462457, MAP: 0.0205173, MRR: 0.0406665, NDCG: 0.0315756, F1: 0.0175365, HIT_RATE: 0.1081967, ARHR: 0.0426161, NOVELTY: 0.0057023, AVERAGE_POPULARITY: 0.0265445, DIVERSITY_MEAN_INTER_LIST: 0.9230532, DIVERSITY_HERFINDAHL: 0.9922851, COVERAGE_ITEM: 0.4146679, COVERAGE_ITEM_CORRECT: 0.0152839, COVERAGE_USER: 0.5756889, COVERAGE_USER_CORRECT: 0.0566251, DIVERSITY_GINI: 0.1601119, SHANNON_ENTROPY: 10.9458614, 
+SearchBayesianSkopt: Config 3 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1134843, PRECISION: 0.0211803, PRECISION_RECALL_MIN_DEN: 0.0905315, RECALL: 0.0890649, MAP: 0.0403269, MRR: 0.0805459, NDCG: 0.0611510, F1: 0.0342223, HIT_RATE: 0.2118033, ARHR: 0.0876812, NOVELTY: 0.0047316, AVERAGE_POPULARITY: 0.1329724, DIVERSITY_MEAN_INTER_LIST: 0.9704833, DIVERSITY_HERFINDAHL: 0.9970271, COVERAGE_ITEM: 0.3541867, COVERAGE_ITEM_CORRECT: 0.0185563, COVERAGE_USER: 0.5756889, COVERAGE_USER_CORRECT: 0.1010444, DIVERSITY_GINI: 0.0982551, SHANNON_ENTROPY: 10.6320949, 
