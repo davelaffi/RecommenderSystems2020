@@ -1,5 +1,6 @@
 import numpy as np
 import scipy.sparse as sp
+from Base.DataIO import DataIO
 from Base.Similarity.Compute_Similarity_Python import Compute_Similarity_Python
 
 
@@ -128,3 +129,21 @@ class ItemBasedCollaborativeFiltering(object):
     
     def get_URM_train(self):
         return self.URM_train
+
+
+    def save_model(self, folder_path, file_name = None):
+
+        if file_name is None:
+            file_name = self.RECOMMENDER_NAME
+
+        self._print("Saving model in file '{}'".format(folder_path + file_name))
+
+        data_dict_to_save = {"W_sparse": self.W_sparse}
+
+        dataIO = DataIO(folder_path=folder_path)
+        dataIO.save_data(file_name=file_name, data_dict_to_save = data_dict_to_save)
+
+        self._print("Saving complete")
+
+    def _print(self, string):
+        print("{}: {}".format(self.RECOMMENDER_NAME, string))
