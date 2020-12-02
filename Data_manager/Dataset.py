@@ -30,10 +30,11 @@ class Dataset(object):
 
     # Available URM split
     URM_train_av = {}
+    URM_validation_av = {}
     URM_test_av = {}
 
     # Available ICM for the given dataset, there might be no ICM, one or many
-    AVAILABLE_ICM = {}
+    #AVAILABLE_ICM = {}
     # AVAILABLE_ICM_feature_mapper = {}
     # _HAS_ICM = True
 
@@ -48,8 +49,9 @@ class Dataset(object):
 
     def __init__(self, dataset_name,
                  URM_train,
-                 URM_test,
-                 ICM_dictionary
+                 URM_validation,
+                 URM_test
+                #  ICM_dictionary
                  #ICM_feature_mapper_dictionary = None,
                  #UCM_dictionary = None,
                  #UCM_feature_mapper_dictionary = None,
@@ -71,10 +73,11 @@ class Dataset(object):
 
         self.DATASET_NAME = dataset_name
         self.URM_train_av = URM_train
+        self.URM_validation_av = URM_validation
         self.URM_test_av = URM_test
 
         #if ICM_dictionary is not None and len(ICM_dictionary)>0:
-        self.AVAILABLE_ICM = ICM_dictionary
+        #self.AVAILABLE_ICM = ICM_dictionary
         # self.AVAILABLE_ICM_feature_mapper = ICM_feature_mapper_dictionary
         # self._HAS_ICM = True
 
@@ -85,11 +88,14 @@ class Dataset(object):
     def get_urm_train(self) :
         return self.URM_train_av.copy()
     
+    def get_urm_validation(self) :
+        return self.URM_validation_av.copy()
+    
     def get_urm_test(self) :
         return self.URM_test_av.copy()
 
-    def get_icm(self) :
-        return self.AVAILABLE_ICM.copy()
+    #def get_icm(self) :
+    #    return self.AVAILABLE_ICM.copy()
 
 
 
@@ -111,11 +117,13 @@ class Dataset(object):
 
         dataIO.save_data(data_dict_to_save = self.URM_train_av, file_name = "dataset_URM_train")
 
+        dataIO.save_data(data_dict_to_save = self.URM_validation_av, file_name = "dataset_URM_validation")
+
         dataIO.save_data(data_dict_to_save = self.URM_test_av,
             file_name = "dataset_URM_test")
 
-        dataIO.save_data(data_dict_to_save = self.AVAILABLE_ICM,
-            file_name = "dataset_ICM")
+        # dataIO.save_data(data_dict_to_save = self.AVAILABLE_ICM,
+        #     file_name = "dataset_ICM")
 
     
 
@@ -129,8 +137,10 @@ class Dataset(object):
             self.__setattr__(attrib_name, attrib_object)
 
         self.URM_train_av = dataIO.load_data(file_name = "dataset_URM_train")
+        
+        self.URM_validation_av = dataIO.load_data(file_name = "dataset_URM_validation")
 
         self.URM_test_av = dataIO.load_data(file_name = "dataset_URM_test")
         
-        self.AVAILABLE_ICM = dataIO.load_data(file_name = "dataset_ICM")
+        # self.AVAILABLE_ICM = dataIO.load_data(file_name = "dataset_ICM")
         
