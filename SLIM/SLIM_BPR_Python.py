@@ -11,27 +11,27 @@ import time
 import numpy as np
 import scipy.sparse as sp
 
-#from Base.BaseSimilarityMatrixRecommender import BaseItemSimilarityMatrixRecommender
+from Base.BaseRecommender import BaseRecommender
 from Base.Recommender_utils import similarityMatrixTopK
 
 
-class SLIM_BPR_Python(object):
+class SLIM_BPR_Python(BaseRecommender):
     """
     This class is a python porting of the BPRSLIM algorithm in MyMediaLite written in C#
 
     This class does not implement early stopping
     """
 
-    def __init__(self,topK = 100, epochs = 25, lambda_i = 0.0025, lambda_j = 0.00025, learning_rate = 0.05):
-        #super(SLIM_BPR_Python, self).__init__(URM_train)
+    def __init__(self,URM):
+        super(SLIM_BPR_Python, self).__init__(URM_train)
+        
+
+    def fit(self,topK = 100, epochs = 25, lambda_i = 0.0025, lambda_j = 0.00025, learning_rate = 0.05):
         self.topK=topK
         self.epochs=epochs
         self.lambda_i = lambda_i
         self.lambda_j = lambda_j
         self.learning_rate = learning_rate
-
-    def fit(self,URM):
-        
         self.URM_train = sp.csc_matrix(URM)
         self.n_users = self.URM_train.shape[0]
         self.n_items = self.URM_train.shape[1]
@@ -47,6 +47,7 @@ class SLIM_BPR_Python(object):
 
         self.W_sparse = similarityMatrixTopK(self.item_item_S, k=self.topK, verbose=False)
         self.W_sparse = sp.csr_matrix(self.W_sparse)
+        self.RECS = self.URM_train.dot(self.W_sparse)
 
 
     def _run_epoch(self, n_epoch):
@@ -109,21 +110,3 @@ class SLIM_BPR_Python(object):
                 neg_item_selected = True
 
         return user_id, pos_item_id, neg_item_id
-
-    def get_expected_ratings(self, user_id):
-        user_profile = self.URM_train[user_id]
-        expected_ratings = user_profile.dot(self.W_sparse).toarray().ravel()
-
-        # # EDIT
-        return expected_ratings
-    
-    def recommend(self,user_id,urm_train: sp.csr_matrix,at=10):
-        # compute the scores using the dot product
-        scores = self.get_expected_ratings(user_id)
-        user_profile = self.URM_train[user_id].indices
-        scores[user_profile] = 0
-
-        # rank items
-        recommended_items = np.flip(np.argsort(scores), 0)
-
-        return recommended_items[:at]

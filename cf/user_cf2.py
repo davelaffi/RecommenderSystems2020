@@ -8,8 +8,7 @@ class UserBasedCollaborativeFiltering(BaseRecommender):
     RECOMMENDER_NAME = "UserBasedCFRecommender"
 
     def __init__(self,URM):
-        self.URM_train = URM
-        self.W_sparse = None
+        super(UserBasedCollaborativeFiltering, self).__init__(URM)
 
     def generate_similarity_matrix(self):
         similarity_object = Compute_Similarity_Python(self.URM_train, topK =self.knn, shrink = self.shrink, normalize=True, similarity=self.similarity)
@@ -21,6 +20,7 @@ class UserBasedCollaborativeFiltering(BaseRecommender):
         self.shrink = shrink
         self.similarity = similarity
         self.W_sparse = self.generate_similarity_matrix()
+        self.RECS = self.URM_train.dot(self.W_sparse)
         
 
     

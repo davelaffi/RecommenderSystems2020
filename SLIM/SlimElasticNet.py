@@ -7,13 +7,14 @@ import scipy.sparse as sp
 from sklearn.linear_model import ElasticNet
 import time
 import os
+from Base.BaseRecommender import BaseRecommender
 
 completed = 0
 old = 0
 s_time = 0
 r_time = 0
 
-class SLIMElasticNetRecommender(object):
+class SLIMElasticNetRecommender(BaseRecommender):
     """
     Train a Sparse Linear Methods (SLIM) item Similarity_MFD model.
     NOTE: ElasticNet solver is parallel, a single intance of SLIM_ElasticNet will
@@ -27,27 +28,10 @@ class SLIMElasticNetRecommender(object):
         http://glaros.dtc.umn.edu/gkhome/fetch/papers/SLIM2011icdm.pdf
     """
 
-    def __init__(self, alpha=0.8, l1_ratio=0.5, fit_intercept=False, copy_X=False, precompute=False, selection='random',
-                max_iter=100, tol=1e-4, topK=100, positive_only=True, workers=multiprocessing.cpu_count()):
-    
-        self.analyzed_items = 0
-        self.alpha = alpha #1e-4
-        self.l1_ratio = l1_ratio #0.1
-        self.fit_intercept = fit_intercept
-        self.copy_X = copy_X
-        self.precompute = precompute
-        self.selection = selection
-        self.max_iter = max_iter
-        self.tol = tol
-        self.topK = topK
-        self.positive_only = positive_only
-        self.workers = workers
+    RECOMMENDER_NAME = "SlimElasticNetRecommender"
 
-        if self.l1_ratio <= 0 or self.l1_ratio>1:
-            print("SLIM_ElasticNet: l1_penalty+l2_penalty cannot be equal to zero, setting the ratio l1/(l1+l2) to 1.0")
-            self.l1_ratio = 1.0
-
-
+    def __init__(self,URM):
+        super(SLIMElasticNetRecommender, self).__init__(URM)
 
     def _partial_fit(self, URM_train, currentItem):
 
@@ -118,7 +102,8 @@ class SLIMElasticNetRecommender(object):
 
         return values, rows, cols
 
-    def fit(self, urm):
+    def fit (self,alpha=0.8, l1_ratio=0.5, fit_intercept=False, copy_X=False, precompute=False, selection='random',
+                max_iter=100, tol=1e-4, topK=100, positive_only=True, workers=multiprocessing.cpu_count()):
 
         """
         call this method for fit the model _pfit will be called from here
@@ -138,7 +123,24 @@ class SLIMElasticNetRecommender(object):
         :return: _
         """
 
-        self.URM_train = sp.csc_matrix(urm)
+        self.analyzed_items = 0
+        self.alpha = alpha #1e-4
+        self.l1_ratio = l1_ratio #0.1
+        self.fit_intercept = fit_intercept
+        self.copy_X = copy_X
+        self.precompute = precompute
+        self.selection = selection
+        self.max_iter = max_iter
+        self.tol = tol
+        self.topK = topK
+        self.positive_only = positive_only
+        self.workers = workers
+
+        if self.l1_ratio <= 0 or self.l1_ratio>1:
+            print("SLIM_ElasticNet: l1_penalty+l2_penalty cannot be equal to zero, setting the ratio l1/(l1+l2) to 1.0")
+            self.l1_ratio = 1.0
+
+        
         n_items = self.URM_train.shape[1]
 
         #create a copy of the URM since each _pfit will modify it
@@ -169,21 +171,5 @@ class SLIMElasticNetRecommender(object):
 
         # generate the sparse weight matrix
         self.W_sparse = sp.csc_matrix((values, (rows, cols)), shape=(n_items, n_items), dtype=np.float32)
+        self.RECS = self.URM_train.dot(self.W_sparse)
     
-    def get_expected_ratings(self, user_id):
-        user_profile = self.URM_train[user_id]
-        expected_ratings = user_profile.dot(self.W_sparse).toarray().ravel()
-
-        # # EDIT
-        return expected_ratings
-
-    def recommend(self,user_id,urm_train: sp.csr_matrix,at=10):
-        # compute the scores using the dot product
-        scores = self.get_expected_ratings(user_id)
-        user_profile = self.URM_train[user_id].indices
-        scores[user_profile] = 0
-
-        # rank items
-        recommended_items = np.flip(np.argsort(scores), 0)
-
-        return recommended_items[:at]
