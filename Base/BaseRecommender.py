@@ -20,6 +20,7 @@ class BaseRecommender(object):
         #super(BaseRecommender, self).__init__()
         self.URM_train = URM
         self.W_sparse = None
+        self.RECS = None
 
 
     def fit(self,knn, shrink, similarity):
@@ -28,7 +29,6 @@ class BaseRecommender(object):
         """
 
     def get_expected_ratings(self,user_id):
-        self.RECS = self.URM_train.dot(self.W_sparse)
         expected_ratings = self.RECS[user_id].todense()
         return np.squeeze(np.asarray(expected_ratings))
 

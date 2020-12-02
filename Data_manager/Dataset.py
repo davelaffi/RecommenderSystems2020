@@ -29,15 +29,13 @@ class Dataset(object):
     DATASET_NAME = None
 
     # Available URM split
-    AVAILABLE_URM = {}
+    URM_train_av = {}
+    URM_test_av = {}
 
     # Available ICM for the given dataset, there might be no ICM, one or many
     AVAILABLE_ICM = {}
     # AVAILABLE_ICM_feature_mapper = {}
     # _HAS_ICM = True
-
-    item_original_ID_to_index = {}
-    user_original_ID_to_index = {}
 
     # additional_data_mapper = {}
     # _HAS_additional_mapper = False
@@ -72,13 +70,26 @@ class Dataset(object):
         super(Dataset, self).__init__()
 
         self.DATASET_NAME = dataset_name
-        self.URM_train = URM_train
-        self.URM_test = URM_test
+        self.URM_train_av = URM_train
+        self.URM_test_av = URM_test
 
         #if ICM_dictionary is not None and len(ICM_dictionary)>0:
         self.AVAILABLE_ICM = ICM_dictionary
         # self.AVAILABLE_ICM_feature_mapper = ICM_feature_mapper_dictionary
         # self._HAS_ICM = True
+
+    
+    def get_dataset_name(self):
+        return self.DATASET_NAME
+
+    def get_urm_train(self) :
+        return self.URM_train_av.copy()
+    
+    def get_urm_test(self) :
+        return self.URM_test_av.copy()
+
+    def get_icm(self) :
+        return self.AVAILABLE_ICM.copy()
 
 
 
@@ -92,20 +103,34 @@ class Dataset(object):
 
         dataIO = DataIO(folder_path = save_folder_path)
         
-        print(self.URM_train)
-        print(self.URM_test)
-        print(self.AVAILABLE_ICM)
-        print(self.DATASET_NAME)
         global_attributes_dict = {
             "DATASET_NAME": self.DATASET_NAME
         }
 
         dataIO.save_data(file_name = "dataset_global_attributes", data_dict_to_save = global_attributes_dict)
 
-        dataIO.save_data(file_name = "dataset_URM_train", data_dict_to_save = self.URM_train)
+        dataIO.save_data(data_dict_to_save = self.URM_train_av, file_name = "dataset_URM_train")
 
-        dataIO.save_data(data_dict_to_save = self.URM_test,
+        dataIO.save_data(data_dict_to_save = self.URM_test_av,
             file_name = "dataset_URM_test")
 
         dataIO.save_data(data_dict_to_save = self.AVAILABLE_ICM,
             file_name = "dataset_ICM")
+
+    
+
+    def load_data(self, save_folder_path):
+
+        dataIO = DataIO(folder_path = save_folder_path)
+
+        global_attributes_dict = dataIO.load_data(file_name = "dataset_global_attributes")
+
+        for attrib_name, attrib_object in global_attributes_dict.items():
+            self.__setattr__(attrib_name, attrib_object)
+
+        self.URM_train_av = dataIO.load_data(file_name = "dataset_URM_train")
+
+        self.URM_test_av = dataIO.load_data(file_name = "dataset_URM_test")
+        
+        self.AVAILABLE_ICM = dataIO.load_data(file_name = "dataset_ICM")
+        
