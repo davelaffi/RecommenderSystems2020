@@ -9,7 +9,8 @@ class ItemBasedCollaborativeFiltering(BaseRecommender):
     RECOMMENDER_NAME = "ItemBasedCFRecommender"
 
     def __init__(self,URM):
-        super(ItemBasedCollaborativeFiltering, self).__init__(URM)
+        #super(ItemBasedCollaborativeFiltering, self).__init__(URM)
+        self.URM_train = URM
 
     def generate_similarity_matrix(self):
         similarity_object = Compute_Similarity_Python(self.URM_train, topK =self.knn, shrink = self.shrink, normalize=True, similarity=self.similarity)

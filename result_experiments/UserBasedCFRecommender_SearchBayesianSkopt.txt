@@ -676,3 +676,614 @@ SearchBayesianSkopt: Search complete. Best config is 137: {'knn': 238, 'shrink':
 SearchBayesianSkopt: Best config evaluated with evaluator_test with constructor data for final test. Config: {'knn': 238, 'shrink': 709, 'similarity': 'cosine'} - results:
 CUTOFF: 10 - ROC_AUC: 0.1333399, PRECISION: 0.0260236, PRECISION_RECALL_MIN_DEN: 0.1019063, RECALL: 0.0998081, MAP: 0.0477335, MRR: 0.0982509, NDCG: 0.0714401, F1: 0.0412831, HIT_RATE: 0.2602357, ARHR: 0.1095841, NOVELTY: 0.0047404, AVERAGE_POPULARITY: 0.1311408, DIVERSITY_MEAN_INTER_LIST: 0.9729748, DIVERSITY_HERFINDAHL: 0.9972780, COVERAGE_ITEM: 0.3866795, COVERAGE_ITEM_CORRECT: 0.0251781, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1306153, DIVERSITY_GINI: 0.1078811, SHANNON_ENTROPY: 10.7631177, 
 
+SearchBayesianSkopt: Config 0 Exception. Config: {'knn': 452, 'shrink': 169, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 1 Exception. Config: {'knn': 782, 'shrink': 603, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 2 Exception. Config: {'knn': 787, 'shrink': 840, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 3 Exception. Config: {'knn': 378, 'shrink': 523, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 4 Exception. Config: {'knn': 691, 'shrink': 532, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 5 Exception. Config: {'knn': 417, 'shrink': 346, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 6 Exception. Config: {'knn': 381, 'shrink': 253, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 7 Exception. Config: {'knn': 219, 'shrink': 849, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 8 Exception. Config: {'knn': 806, 'shrink': 483, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 9 Exception. Config: {'knn': 937, 'shrink': 121, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 10 Exception. Config: {'knn': 576, 'shrink': 51, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 11 Exception. Config: {'knn': 578, 'shrink': 696, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 12 Exception. Config: {'knn': 779, 'shrink': 473, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 13 Exception. Config: {'knn': 647, 'shrink': 586, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 14 Exception. Config: {'knn': 477, 'shrink': 191, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 15 Exception. Config: {'knn': 17, 'shrink': 998, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 16 Exception. Config: {'knn': 15, 'shrink': 2, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 17 Exception. Config: {'knn': 10, 'shrink': 998, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 18 Exception. Config: {'knn': 999, 'shrink': 990, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 19 Exception. Config: {'knn': 9, 'shrink': 1, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 20 Exception. Config: {'knn': 9, 'shrink': 992, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 21 Exception. Config: {'knn': 1000, 'shrink': 8, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 22 Exception. Config: {'knn': 992, 'shrink': 999, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 23 Exception. Config: {'knn': 9, 'shrink': 10, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 24 Exception. Config: {'knn': 11, 'shrink': 1000, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 25 Exception. Config: {'knn': 993, 'shrink': 2, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 26 Exception. Config: {'knn': 1000, 'shrink': 985, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 27 Exception. Config: {'knn': 6, 'shrink': 11, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 28 Exception. Config: {'knn': 7, 'shrink': 996, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 29 Exception. Config: {'knn': 993, 'shrink': 991, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 30 Exception. Config: {'knn': 995, 'shrink': 1, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 31 Exception. Config: {'knn': 6, 'shrink': 13, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 32 Exception. Config: {'knn': 9, 'shrink': 986, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 33 Exception. Config: {'knn': 993, 'shrink': 0, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 34 Exception. Config: {'knn': 980, 'shrink': 989, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 35 Exception. Config: {'knn': 7, 'shrink': 9, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 36 Exception. Config: {'knn': 11, 'shrink': 996, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 37 Exception. Config: {'knn': 999, 'shrink': 998, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 38 Exception. Config: {'knn': 997, 'shrink': 0, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 39 Exception. Config: {'knn': 6, 'shrink': 2, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 40 Exception. Config: {'knn': 999, 'shrink': 3, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 41 Exception. Config: {'knn': 9, 'shrink': 978, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 42 Exception. Config: {'knn': 990, 'shrink': 1000, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 43 Exception. Config: {'knn': 18, 'shrink': 1, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 44 Exception. Config: {'knn': 6, 'shrink': 996, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 45 Exception. Config: {'knn': 1000, 'shrink': 999, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 46 Exception. Config: {'knn': 994, 'shrink': 17, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 47 Exception. Config: {'knn': 8, 'shrink': 12, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 48 Exception. Config: {'knn': 998, 'shrink': 1000, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Config 49 Exception. Config: {'knn': 989, 'shrink': 0, 'similarity': 'cosine'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 249, in _fit_model
+    **self.recommender_input_args.CONSTRUCTOR_KEYWORD_ARGS)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 11, in __init__
+    super(UserBasedCollaborativeFiltering, self).__init__(URM)
+TypeError: __init__() takes 1 positional argument but 2 were given
+
+SearchBayesianSkopt: Search complete. Best config is None: None
+SearchBayesianSkopt: New best config found. Config 0: {'knn': 175, 'shrink': 265, 'similarity': 'cosine'} - results: ROC_AUC: 0.1067965, PRECISION: 0.0204609, PRECISION_RECALL_MIN_DEN: 0.0852482, RECALL: 0.0836536, MAP: 0.0385721, MRR: 0.0757337, NDCG: 0.0578188, F1: 0.0328797, HIT_RATE: 0.2046091, ARHR: 0.0827734, NOVELTY: 0.0048238, AVERAGE_POPULARITY: 0.1176736, DIVERSITY_MEAN_INTER_LIST: 0.9784328, DIVERSITY_HERFINDAHL: 0.9978222, COVERAGE_ITEM: 0.3908373, COVERAGE_ITEM_CORRECT: 0.0184023, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0986536, DIVERSITY_GINI: 0.1185634, SHANNON_ENTROPY: 10.9926005, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'knn': 175, 'shrink': 265, 'similarity': 'cosine'} - results:
+CUTOFF: 10 - ROC_AUC: 0.1180458, PRECISION: 0.0230877, PRECISION_RECALL_MIN_DEN: 0.0877796, RECALL: 0.0858595, MAP: 0.0395721, MRR: 0.0852014, NDCG: 0.0607887, F1: 0.0363900, HIT_RATE: 0.2308768, ARHR: 0.0941495, NOVELTY: 0.0048401, AVERAGE_POPULARITY: 0.1159748, DIVERSITY_MEAN_INTER_LIST: 0.9790210, DIVERSITY_HERFINDAHL: 0.9978825, COVERAGE_ITEM: 0.4076997, COVERAGE_ITEM_CORRECT: 0.0234456, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1180320, DIVERSITY_GINI: 0.1235967, SHANNON_ENTROPY: 11.0564410, 
+
+SearchBayesianSkopt: New best config found. Config 1: {'knn': 249, 'shrink': 853, 'similarity': 'cosine'} - results: ROC_AUC: 0.1067234, PRECISION: 0.0206763, PRECISION_RECALL_MIN_DEN: 0.0867531, RECALL: 0.0850650, MAP: 0.0389215, MRR: 0.0756964, NDCG: 0.0583851, F1: 0.0332666, HIT_RATE: 0.2067629, ARHR: 0.0826685, NOVELTY: 0.0047927, AVERAGE_POPULARITY: 0.1271581, DIVERSITY_MEAN_INTER_LIST: 0.9749932, DIVERSITY_HERFINDAHL: 0.9974783, COVERAGE_ITEM: 0.3879885, COVERAGE_ITEM_CORRECT: 0.0183253, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1002894, DIVERSITY_GINI: 0.1155911, SHANNON_ENTROPY: 10.8812302, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'knn': 249, 'shrink': 853, 'similarity': 'cosine'} - results:
+CUTOFF: 10 - ROC_AUC: 0.1157643, PRECISION: 0.0224486, PRECISION_RECALL_MIN_DEN: 0.0863271, RECALL: 0.0844010, MAP: 0.0392041, MRR: 0.0842233, NDCG: 0.0599607, F1: 0.0354645, HIT_RATE: 0.2244857, ARHR: 0.0929720, NOVELTY: 0.0048088, AVERAGE_POPULARITY: 0.1251448, DIVERSITY_MEAN_INTER_LIST: 0.9758437, DIVERSITY_HERFINDAHL: 0.9975649, COVERAGE_ITEM: 0.4042348, COVERAGE_ITEM_CORRECT: 0.0223292, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1152636, DIVERSITY_GINI: 0.1203826, SHANNON_ENTROPY: 10.9489465, 
+
+SearchBayesianSkopt: Config 2 is suboptimal. Config: {'knn': 54, 'shrink': 719, 'similarity': 'cosine'} - results: ROC_AUC: 0.1067164, PRECISION: 0.0200948, PRECISION_RECALL_MIN_DEN: 0.0844105, RECALL: 0.0828074, MAP: 0.0385441, MRR: 0.0749728, NDCG: 0.0575578, F1: 0.0323413, HIT_RATE: 0.2009477, ARHR: 0.0813110, NOVELTY: 0.0048810, AVERAGE_POPULARITY: 0.1109920, DIVERSITY_MEAN_INTER_LIST: 0.9806239, DIVERSITY_HERFINDAHL: 0.9980413, COVERAGE_ITEM: 0.4075457, COVERAGE_ITEM_CORRECT: 0.0187103, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0992827, DIVERSITY_GINI: 0.1304150, SHANNON_ENTROPY: 11.1714853, 
+SearchBayesianSkopt: Config 3 is suboptimal. Config: {'knn': 191, 'shrink': 154, 'similarity': 'cosine'} - results: ROC_AUC: 0.1062269, PRECISION: 0.0209347, PRECISION_RECALL_MIN_DEN: 0.0858632, RECALL: 0.0841674, MAP: 0.0384757, MRR: 0.0758593, NDCG: 0.0580028, F1: 0.0335297, HIT_RATE: 0.2093474, ARHR: 0.0832314, NOVELTY: 0.0048375, AVERAGE_POPULARITY: 0.1130773, DIVERSITY_MEAN_INTER_LIST: 0.9801725, DIVERSITY_HERFINDAHL: 0.9979961, COVERAGE_ITEM: 0.3931858, COVERAGE_ITEM_CORRECT: 0.0194418, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.1001636, DIVERSITY_GINI: 0.1203083, SHANNON_ENTROPY: 11.0622423, 
+SearchBayesianSkopt: Config 4 is suboptimal. Config: {'knn': 579, 'shrink': 942, 'similarity': 'cosine'} - results: ROC_AUC: 0.1050600, PRECISION: 0.0202671, PRECISION_RECALL_MIN_DEN: 0.0850759, RECALL: 0.0834861, MAP: 0.0388161, MRR: 0.0754327, NDCG: 0.0578509, F1: 0.0326162, HIT_RATE: 0.2026707, ARHR: 0.0820227, NOVELTY: 0.0047532, AVERAGE_POPULARITY: 0.1333233, DIVERSITY_MEAN_INTER_LIST: 0.9723584, DIVERSITY_HERFINDAHL: 0.9972149, COVERAGE_ITEM: 0.3712801, COVERAGE_ITEM_CORRECT: 0.0179788, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0980244, DIVERSITY_GINI: 0.1053090, SHANNON_ENTROPY: 10.7220218, 
+SearchBayesianSkopt: Config 5 is suboptimal. Config: {'knn': 817, 'shrink': 642, 'similarity': 'cosine'} - results: ROC_AUC: 0.1059002, PRECISION: 0.0200948, PRECISION_RECALL_MIN_DEN: 0.0853004, RECALL: 0.0837287, MAP: 0.0384288, MRR: 0.0744478, NDCG: 0.0575261, F1: 0.0324110, HIT_RATE: 0.2009477, ARHR: 0.0807926, NOVELTY: 0.0047445, AVERAGE_POPULARITY: 0.1326870, DIVERSITY_MEAN_INTER_LIST: 0.9727974, DIVERSITY_HERFINDAHL: 0.9972588, COVERAGE_ITEM: 0.3668912, COVERAGE_ITEM_CORRECT: 0.0176708, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0980244, DIVERSITY_GINI: 0.1025016, SHANNON_ENTROPY: 10.6857522, 
+SearchBayesianSkopt: Config 6 is suboptimal. Config: {'knn': 644, 'shrink': 139, 'similarity': 'cosine'} - results: ROC_AUC: 0.1067424, PRECISION: 0.0205255, PRECISION_RECALL_MIN_DEN: 0.0851803, RECALL: 0.0836144, MAP: 0.0385954, MRR: 0.0751658, NDCG: 0.0577852, F1: 0.0329601, HIT_RATE: 0.2052552, ARHR: 0.0819454, NOVELTY: 0.0047875, AVERAGE_POPULARITY: 0.1194675, DIVERSITY_MEAN_INTER_LIST: 0.9778258, DIVERSITY_HERFINDAHL: 0.9977615, COVERAGE_ITEM: 0.3718576, COVERAGE_ITEM_CORRECT: 0.0189413, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0994086, DIVERSITY_GINI: 0.1068423, SHANNON_ENTROPY: 10.8630395, 
+SearchBayesianSkopt: Config 7 is suboptimal. Config: {'knn': 813, 'shrink': 660, 'similarity': 'cosine'} - results: ROC_AUC: 0.1058074, PRECISION: 0.0200517, PRECISION_RECALL_MIN_DEN: 0.0852214, RECALL: 0.0836498, MAP: 0.0384302, MRR: 0.0743644, NDCG: 0.0574724, F1: 0.0323490, HIT_RATE: 0.2005169, ARHR: 0.0807609, NOVELTY: 0.0047444, AVERAGE_POPULARITY: 0.1327996, DIVERSITY_MEAN_INTER_LIST: 0.9727564, DIVERSITY_HERFINDAHL: 0.9972547, COVERAGE_ITEM: 0.3668912, COVERAGE_ITEM_CORRECT: 0.0175938, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0976469, DIVERSITY_GINI: 0.1024887, SHANNON_ENTROPY: 10.6849842, 
+SearchBayesianSkopt: Config 8 is suboptimal. Config: {'knn': 655, 'shrink': 159, 'similarity': 'cosine'} - results: ROC_AUC: 0.1063625, PRECISION: 0.0205471, PRECISION_RECALL_MIN_DEN: 0.0859425, RECALL: 0.0843703, MAP: 0.0386690, MRR: 0.0751220, NDCG: 0.0579845, F1: 0.0330462, HIT_RATE: 0.2054706, ARHR: 0.0818299, NOVELTY: 0.0047818, AVERAGE_POPULARITY: 0.1211110, DIVERSITY_MEAN_INTER_LIST: 0.9771987, DIVERSITY_HERFINDAHL: 0.9976988, COVERAGE_ITEM: 0.3708181, COVERAGE_ITEM_CORRECT: 0.0188643, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0996602, DIVERSITY_GINI: 0.1060462, SHANNON_ENTROPY: 10.8358046, 
+SearchBayesianSkopt: Config 9 is suboptimal. Config: {'knn': 461, 'shrink': 790, 'similarity': 'cosine'} - results: ROC_AUC: 0.1064647, PRECISION: 0.0202455, PRECISION_RECALL_MIN_DEN: 0.0851023, RECALL: 0.0834960, MAP: 0.0387200, MRR: 0.0756023, NDCG: 0.0578577, F1: 0.0325891, HIT_RATE: 0.2024553, ARHR: 0.0821858, NOVELTY: 0.0047653, AVERAGE_POPULARITY: 0.1309772, DIVERSITY_MEAN_INTER_LIST: 0.9733157, DIVERSITY_HERFINDAHL: 0.9973106, COVERAGE_ITEM: 0.3754764, COVERAGE_ITEM_CORRECT: 0.0179788, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0984019, DIVERSITY_GINI: 0.1080385, SHANNON_ENTROPY: 10.7686866, 
+SearchBayesianSkopt: Config 10 is suboptimal. Config: {'knn': 275, 'shrink': 355, 'similarity': 'cosine'} - results: ROC_AUC: 0.1058576, PRECISION: 0.0205471, PRECISION_RECALL_MIN_DEN: 0.0857471, RECALL: 0.0840946, MAP: 0.0387088, MRR: 0.0754798, NDCG: 0.0579527, F1: 0.0330250, HIT_RATE: 0.2054706, ARHR: 0.0824575, NOVELTY: 0.0047993, AVERAGE_POPULARITY: 0.1233209, DIVERSITY_MEAN_INTER_LIST: 0.9763801, DIVERSITY_HERFINDAHL: 0.9976170, COVERAGE_ITEM: 0.3877575, COVERAGE_ITEM_CORRECT: 0.0185948, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0991569, DIVERSITY_GINI: 0.1154928, SHANNON_ENTROPY: 10.9084268, 
+SearchBayesianSkopt: Config 11 is suboptimal. Config: {'knn': 446, 'shrink': 409, 'similarity': 'cosine'} - results: ROC_AUC: 0.1071600, PRECISION: 0.0204609, PRECISION_RECALL_MIN_DEN: 0.0857941, RECALL: 0.0841887, MAP: 0.0386382, MRR: 0.0760051, NDCG: 0.0580174, F1: 0.0329209, HIT_RATE: 0.2046091, ARHR: 0.0825308, NOVELTY: 0.0047738, AVERAGE_POPULARITY: 0.1274675, DIVERSITY_MEAN_INTER_LIST: 0.9746750, DIVERSITY_HERFINDAHL: 0.9974465, COVERAGE_ITEM: 0.3755534, COVERAGE_ITEM_CORRECT: 0.0182483, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0996602, DIVERSITY_GINI: 0.1085094, SHANNON_ENTROPY: 10.8009826, 
+SearchBayesianSkopt: Config 12 is suboptimal. Config: {'knn': 40, 'shrink': 107, 'similarity': 'cosine'} - results: ROC_AUC: 0.1060074, PRECISION: 0.0200517, PRECISION_RECALL_MIN_DEN: 0.0836608, RECALL: 0.0821385, MAP: 0.0389093, MRR: 0.0758793, NDCG: 0.0577636, F1: 0.0322343, HIT_RATE: 0.2005169, ARHR: 0.0821898, NOVELTY: 0.0049381, AVERAGE_POPULARITY: 0.0971529, DIVERSITY_MEAN_INTER_LIST: 0.9848344, DIVERSITY_HERFINDAHL: 0.9984622, COVERAGE_ITEM: 0.4147064, COVERAGE_ITEM_CORRECT: 0.0199038, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0987794, DIVERSITY_GINI: 0.1378267, SHANNON_ENTROPY: 11.3909908, 
+SearchBayesianSkopt: Config 13 is suboptimal. Config: {'knn': 484, 'shrink': 708, 'similarity': 'cosine'} - results: ROC_AUC: 0.1060771, PRECISION: 0.0203317, PRECISION_RECALL_MIN_DEN: 0.0855031, RECALL: 0.0838999, MAP: 0.0385413, MRR: 0.0755455, NDCG: 0.0578026, F1: 0.0327315, HIT_RATE: 0.2033168, ARHR: 0.0819623, NOVELTY: 0.0047625, AVERAGE_POPULARITY: 0.1315972, DIVERSITY_MEAN_INTER_LIST: 0.9730410, DIVERSITY_HERFINDAHL: 0.9972831, COVERAGE_ITEM: 0.3744755, COVERAGE_ITEM_CORRECT: 0.0180173, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0991569, DIVERSITY_GINI: 0.1074454, SHANNON_ENTROPY: 10.7578582, 
+SearchBayesianSkopt: Config 14 is suboptimal. Config: {'knn': 720, 'shrink': 811, 'similarity': 'cosine'} - results: ROC_AUC: 0.1057014, PRECISION: 0.0200517, PRECISION_RECALL_MIN_DEN: 0.0843293, RECALL: 0.0826691, MAP: 0.0384979, MRR: 0.0746363, NDCG: 0.0573108, F1: 0.0322750, HIT_RATE: 0.2005169, ARHR: 0.0810403, NOVELTY: 0.0047456, AVERAGE_POPULARITY: 0.1337563, DIVERSITY_MEAN_INTER_LIST: 0.9723180, DIVERSITY_HERFINDAHL: 0.9972109, COVERAGE_ITEM: 0.3674302, COVERAGE_ITEM_CORRECT: 0.0177863, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0971436, DIVERSITY_GINI: 0.1030923, SHANNON_ENTROPY: 10.6906014, 
+SearchBayesianSkopt: Config 15 is suboptimal. Config: {'knn': 984, 'shrink': 11, 'similarity': 'cosine'} - results: ROC_AUC: 0.0977068, PRECISION: 0.0196425, PRECISION_RECALL_MIN_DEN: 0.0828761, RECALL: 0.0814498, MAP: 0.0347645, MRR: 0.0678562, NDCG: 0.0536906, F1: 0.0316518, HIT_RATE: 0.1964247, ARHR: 0.0734221, NOVELTY: 0.0051117, AVERAGE_POPULARITY: 0.0629418, DIVERSITY_MEAN_INTER_LIST: 0.9928069, DIVERSITY_HERFINDAHL: 0.9992593, COVERAGE_ITEM: 0.4389220, COVERAGE_ITEM_CORRECT: 0.0227526, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0958852, DIVERSITY_GINI: 0.1671444, SHANNON_ENTROPY: 12.0493007, 
+SearchBayesianSkopt: Config 16 is suboptimal. Config: {'knn': 9, 'shrink': 990, 'similarity': 'cosine'} - results: ROC_AUC: 0.0999113, PRECISION: 0.0187810, PRECISION_RECALL_MIN_DEN: 0.0787711, RECALL: 0.0773665, MAP: 0.0355389, MRR: 0.0698723, NDCG: 0.0534469, F1: 0.0302248, HIT_RATE: 0.1878096, ARHR: 0.0751208, NOVELTY: 0.0049906, AVERAGE_POPULARITY: 0.0900638, DIVERSITY_MEAN_INTER_LIST: 0.9779187, DIVERSITY_HERFINDAHL: 0.9977708, COVERAGE_ITEM: 0.3909528, COVERAGE_ITEM_CORRECT: 0.0192108, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0931169, DIVERSITY_GINI: 0.1273789, SHANNON_ENTROPY: 11.1762641, 
+SearchBayesianSkopt: Config 17 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 18 is suboptimal. Config: {'knn': 998, 'shrink': 8, 'similarity': 'cosine'} - results: ROC_AUC: 0.0950475, PRECISION: 0.0188025, PRECISION_RECALL_MIN_DEN: 0.0800134, RECALL: 0.0786997, MAP: 0.0344053, MRR: 0.0661755, NDCG: 0.0523870, F1: 0.0303532, HIT_RATE: 0.1880250, ARHR: 0.0714367, NOVELTY: 0.0051922, AVERAGE_POPULARITY: 0.0548050, DIVERSITY_MEAN_INTER_LIST: 0.9941245, DIVERSITY_HERFINDAHL: 0.9993910, COVERAGE_ITEM: 0.4576708, COVERAGE_ITEM_CORRECT: 0.0230606, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0927394, DIVERSITY_GINI: 0.1857987, SHANNON_ENTROPY: 12.2708520, 
+SearchBayesianSkopt: Config 19 is suboptimal. Config: {'knn': 21, 'shrink': 1, 'similarity': 'cosine'} - results: ROC_AUC: 0.0771750, PRECISION: 0.0148395, PRECISION_RECALL_MIN_DEN: 0.0608849, RECALL: 0.0596778, MAP: 0.0262939, MRR: 0.0524123, NDCG: 0.0401963, F1: 0.0237687, HIT_RATE: 0.1483954, ARHR: 0.0567031, NOVELTY: 0.0057482, AVERAGE_POPULARITY: 0.0249792, DIVERSITY_MEAN_INTER_LIST: 0.9949829, DIVERSITY_HERFINDAHL: 0.9994769, COVERAGE_ITEM: 0.5498749, COVERAGE_ITEM_CORRECT: 0.0214822, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0733610, DIVERSITY_GINI: 0.2957935, SHANNON_ENTROPY: 12.9946777, 
+SearchBayesianSkopt: Config 20 is suboptimal. Config: {'knn': 989, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1050119, PRECISION: 0.0201163, PRECISION_RECALL_MIN_DEN: 0.0850237, RECALL: 0.0834127, MAP: 0.0381029, MRR: 0.0745019, NDCG: 0.0572402, F1: 0.0324152, HIT_RATE: 0.2011630, ARHR: 0.0807324, NOVELTY: 0.0047305, AVERAGE_POPULARITY: 0.1363966, DIVERSITY_MEAN_INTER_LIST: 0.9709076, DIVERSITY_HERFINDAHL: 0.9970699, COVERAGE_ITEM: 0.3631184, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0984019, DIVERSITY_GINI: 0.1005056, SHANNON_ENTROPY: 10.6278524, 
+SearchBayesianSkopt: Config 21 is suboptimal. Config: {'knn': 12, 'shrink': 998, 'similarity': 'cosine'} - results: ROC_AUC: 0.1005931, PRECISION: 0.0188671, PRECISION_RECALL_MIN_DEN: 0.0797354, RECALL: 0.0783934, MAP: 0.0369263, MRR: 0.0720626, NDCG: 0.0548836, F1: 0.0304143, HIT_RATE: 0.1886711, ARHR: 0.0774362, NOVELTY: 0.0049666, AVERAGE_POPULARITY: 0.0943390, DIVERSITY_MEAN_INTER_LIST: 0.9810237, DIVERSITY_HERFINDAHL: 0.9980812, COVERAGE_ITEM: 0.4028874, COVERAGE_ITEM_CORRECT: 0.0192493, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0929911, DIVERSITY_GINI: 0.1335492, SHANNON_ENTROPY: 11.2714057, 
+SearchBayesianSkopt: Config 22 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 23 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 24 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 25 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 26 is suboptimal. Config: {'knn': 998, 'shrink': 2, 'similarity': 'cosine'} - results: ROC_AUC: 0.0738125, PRECISION: 0.0143657, PRECISION_RECALL_MIN_DEN: 0.0634003, RECALL: 0.0626814, MAP: 0.0265002, MRR: 0.0491228, NDCG: 0.0408058, F1: 0.0233743, HIT_RATE: 0.1436571, ARHR: 0.0531470, NOVELTY: 0.0055723, AVERAGE_POPULARITY: 0.0284752, DIVERSITY_MEAN_INTER_LIST: 0.9966458, DIVERSITY_HERFINDAHL: 0.9996431, COVERAGE_ITEM: 0.5354379, COVERAGE_ITEM_CORRECT: 0.0208277, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0714735, DIVERSITY_GINI: 0.2638930, SHANNON_ENTROPY: 12.9107045, 
+SearchBayesianSkopt: Config 27 is suboptimal. Config: {'knn': 12, 'shrink': 994, 'similarity': 'cosine'} - results: ROC_AUC: 0.1005931, PRECISION: 0.0188671, PRECISION_RECALL_MIN_DEN: 0.0797354, RECALL: 0.0783934, MAP: 0.0369263, MRR: 0.0720626, NDCG: 0.0548836, F1: 0.0304143, HIT_RATE: 0.1886711, ARHR: 0.0774362, NOVELTY: 0.0049666, AVERAGE_POPULARITY: 0.0943299, DIVERSITY_MEAN_INTER_LIST: 0.9810262, DIVERSITY_HERFINDAHL: 0.9980815, COVERAGE_ITEM: 0.4028874, COVERAGE_ITEM_CORRECT: 0.0192493, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0929911, DIVERSITY_GINI: 0.1335494, SHANNON_ENTROPY: 11.2714655, 
+SearchBayesianSkopt: Config 28 is suboptimal. Config: {'knn': 997, 'shrink': 478, 'similarity': 'cosine'} - results: ROC_AUC: 0.1048491, PRECISION: 0.0202455, PRECISION_RECALL_MIN_DEN: 0.0856115, RECALL: 0.0839988, MAP: 0.0379665, MRR: 0.0741514, NDCG: 0.0572600, F1: 0.0326272, HIT_RATE: 0.2024553, ARHR: 0.0804646, NOVELTY: 0.0047368, AVERAGE_POPULARITY: 0.1332216, DIVERSITY_MEAN_INTER_LIST: 0.9721755, DIVERSITY_HERFINDAHL: 0.9971966, COVERAGE_ITEM: 0.3626949, COVERAGE_ITEM_CORRECT: 0.0176323, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0987794, DIVERSITY_GINI: 0.1005282, SHANNON_ENTROPY: 10.6497441, 
+SearchBayesianSkopt: Config 29 is suboptimal. Config: {'knn': 5, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.0908153, PRECISION: 0.0161749, PRECISION_RECALL_MIN_DEN: 0.0680541, RECALL: 0.0668216, MAP: 0.0321687, MRR: 0.0624329, NDCG: 0.0474912, F1: 0.0260452, HIT_RATE: 0.1617489, ARHR: 0.0663471, NOVELTY: 0.0050322, AVERAGE_POPULARITY: 0.0816747, DIVERSITY_MEAN_INTER_LIST: 0.9633780, DIVERSITY_HERFINDAHL: 0.9963170, COVERAGE_ITEM: 0.3517613, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0820435, DIVERSITY_GINI: 0.1069203, SHANNON_ENTROPY: 10.7826903, 
+SearchBayesianSkopt: Config 30 is suboptimal. Config: {'knn': 10, 'shrink': 994, 'similarity': 'cosine'} - results: ROC_AUC: 0.1006412, PRECISION: 0.0189748, PRECISION_RECALL_MIN_DEN: 0.0798004, RECALL: 0.0783861, MAP: 0.0366875, MRR: 0.0719586, NDCG: 0.0547588, F1: 0.0305536, HIT_RATE: 0.1897480, ARHR: 0.0771908, NOVELTY: 0.0049819, AVERAGE_POPULARITY: 0.0915440, DIVERSITY_MEAN_INTER_LIST: 0.9792902, DIVERSITY_HERFINDAHL: 0.9979079, COVERAGE_ITEM: 0.3958807, COVERAGE_ITEM_CORRECT: 0.0194803, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0939977, DIVERSITY_GINI: 0.1298900, SHANNON_ENTROPY: 11.2172782, 
+SearchBayesianSkopt: Config 31 is suboptimal. Config: {'knn': 7, 'shrink': 1, 'similarity': 'cosine'} - results: ROC_AUC: 0.0708004, PRECISION: 0.0125350, PRECISION_RECALL_MIN_DEN: 0.0548314, RECALL: 0.0538919, MAP: 0.0248857, MRR: 0.0495674, NDCG: 0.0371478, F1: 0.0203392, HIT_RATE: 0.1253500, ARHR: 0.0531364, NOVELTY: 0.0056717, AVERAGE_POPULARITY: 0.0273084, DIVERSITY_MEAN_INTER_LIST: 0.9680089, DIVERSITY_HERFINDAHL: 0.9967800, COVERAGE_ITEM: 0.4844273, COVERAGE_ITEM_CORRECT: 0.0180558, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0634202, DIVERSITY_GINI: 0.2275869, SHANNON_ENTROPY: 12.0120318, 
+SearchBayesianSkopt: Config 32 is suboptimal. Config: {'knn': 996, 'shrink': 999, 'similarity': 'cosine'} - results: ROC_AUC: 0.1046921, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0852606, RECALL: 0.0836367, MAP: 0.0381219, MRR: 0.0743655, NDCG: 0.0572745, F1: 0.0324880, HIT_RATE: 0.2015938, ARHR: 0.0806244, NOVELTY: 0.0047301, AVERAGE_POPULARITY: 0.1364492, DIVERSITY_MEAN_INTER_LIST: 0.9708675, DIVERSITY_HERFINDAHL: 0.9970658, COVERAGE_ITEM: 0.3629259, COVERAGE_ITEM_CORRECT: 0.0175168, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1003825, SHANNON_ENTROPY: 10.6259212, 
+SearchBayesianSkopt: Config 33 is suboptimal. Config: {'knn': 991, 'shrink': 999, 'similarity': 'cosine'} - results: ROC_AUC: 0.1050431, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0852929, RECALL: 0.0836820, MAP: 0.0380910, MRR: 0.0744786, NDCG: 0.0572902, F1: 0.0324914, HIT_RATE: 0.2015938, ARHR: 0.0807441, NOVELTY: 0.0047304, AVERAGE_POPULARITY: 0.1363995, DIVERSITY_MEAN_INTER_LIST: 0.9709036, DIVERSITY_HERFINDAHL: 0.9970694, COVERAGE_ITEM: 0.3628489, COVERAGE_ITEM_CORRECT: 0.0175553, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0986536, DIVERSITY_GINI: 0.1004120, SHANNON_ENTROPY: 10.6270851, 
+SearchBayesianSkopt: Config 34 is suboptimal. Config: {'knn': 20, 'shrink': 996, 'similarity': 'cosine'} - results: ROC_AUC: 0.1050252, PRECISION: 0.0194702, PRECISION_RECALL_MIN_DEN: 0.0817036, RECALL: 0.0801997, MAP: 0.0380544, MRR: 0.0736329, NDCG: 0.0563228, F1: 0.0313335, HIT_RATE: 0.1947017, ARHR: 0.0796171, NOVELTY: 0.0049377, AVERAGE_POPULARITY: 0.1008952, DIVERSITY_MEAN_INTER_LIST: 0.9824891, DIVERSITY_HERFINDAHL: 0.9982278, COVERAGE_ITEM: 0.4131665, COVERAGE_ITEM_CORRECT: 0.0188643, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0966402, DIVERSITY_GINI: 0.1376694, SHANNON_ENTROPY: 11.3215102, 
+SearchBayesianSkopt: Config 35 is suboptimal. Config: {'knn': 996, 'shrink': 997, 'similarity': 'cosine'} - results: ROC_AUC: 0.1046921, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0852606, RECALL: 0.0836367, MAP: 0.0381219, MRR: 0.0743655, NDCG: 0.0572745, F1: 0.0324880, HIT_RATE: 0.2015938, ARHR: 0.0806244, NOVELTY: 0.0047301, AVERAGE_POPULARITY: 0.1364492, DIVERSITY_MEAN_INTER_LIST: 0.9708675, DIVERSITY_HERFINDAHL: 0.9970658, COVERAGE_ITEM: 0.3629259, COVERAGE_ITEM_CORRECT: 0.0175168, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1003825, SHANNON_ENTROPY: 10.6259212, 
+SearchBayesianSkopt: Config 36 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 37 is suboptimal. Config: {'knn': 9, 'shrink': 997, 'similarity': 'cosine'} - results: ROC_AUC: 0.0999113, PRECISION: 0.0187810, PRECISION_RECALL_MIN_DEN: 0.0787711, RECALL: 0.0773665, MAP: 0.0355389, MRR: 0.0698723, NDCG: 0.0534469, F1: 0.0302248, HIT_RATE: 0.1878096, ARHR: 0.0751208, NOVELTY: 0.0049906, AVERAGE_POPULARITY: 0.0900679, DIVERSITY_MEAN_INTER_LIST: 0.9779158, DIVERSITY_HERFINDAHL: 0.9977705, COVERAGE_ITEM: 0.3909528, COVERAGE_ITEM_CORRECT: 0.0192108, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0931169, DIVERSITY_GINI: 0.1273766, SHANNON_ENTROPY: 11.1761316, 
+SearchBayesianSkopt: Config 38 is suboptimal. Config: {'knn': 989, 'shrink': 4, 'similarity': 'cosine'} - results: ROC_AUC: 0.0860711, PRECISION: 0.0164333, PRECISION_RECALL_MIN_DEN: 0.0710772, RECALL: 0.0701511, MAP: 0.0306651, MRR: 0.0580436, NDCG: 0.0467344, F1: 0.0266287, HIT_RATE: 0.1643334, ARHR: 0.0623302, NOVELTY: 0.0053895, AVERAGE_POPULARITY: 0.0393307, DIVERSITY_MEAN_INTER_LIST: 0.9958969, DIVERSITY_HERFINDAHL: 0.9995682, COVERAGE_ITEM: 0.5067565, COVERAGE_ITEM_CORRECT: 0.0223677, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0820435, DIVERSITY_GINI: 0.2320481, SHANNON_ENTROPY: 12.6841563, 
+SearchBayesianSkopt: Config 39 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 40 is suboptimal. Config: {'knn': 9, 'shrink': 996, 'similarity': 'cosine'} - results: ROC_AUC: 0.0999113, PRECISION: 0.0187810, PRECISION_RECALL_MIN_DEN: 0.0787711, RECALL: 0.0773665, MAP: 0.0355389, MRR: 0.0698723, NDCG: 0.0534469, F1: 0.0302248, HIT_RATE: 0.1878096, ARHR: 0.0751208, NOVELTY: 0.0049906, AVERAGE_POPULARITY: 0.0900679, DIVERSITY_MEAN_INTER_LIST: 0.9779158, DIVERSITY_HERFINDAHL: 0.9977705, COVERAGE_ITEM: 0.3909528, COVERAGE_ITEM_CORRECT: 0.0192108, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0931169, DIVERSITY_GINI: 0.1273766, SHANNON_ENTROPY: 11.1761316, 
+SearchBayesianSkopt: Config 41 is suboptimal. Config: {'knn': 999, 'shrink': 7, 'similarity': 'cosine'} - results: ROC_AUC: 0.0936621, PRECISION: 0.0181564, PRECISION_RECALL_MIN_DEN: 0.0784419, RECALL: 0.0772204, MAP: 0.0336546, MRR: 0.0644181, NDCG: 0.0512350, F1: 0.0294001, HIT_RATE: 0.1815636, ARHR: 0.0692092, NOVELTY: 0.0052302, AVERAGE_POPULARITY: 0.0514213, DIVERSITY_MEAN_INTER_LIST: 0.9945814, DIVERSITY_HERFINDAHL: 0.9994367, COVERAGE_ITEM: 0.4676805, COVERAGE_ITEM_CORRECT: 0.0227526, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0904744, DIVERSITY_GINI: 0.1950420, SHANNON_ENTROPY: 12.3642002, 
+SearchBayesianSkopt: Config 42 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 43 is suboptimal. Config: {'knn': 6, 'shrink': 991, 'similarity': 'cosine'} - results: ROC_AUC: 0.0943291, PRECISION: 0.0170795, PRECISION_RECALL_MIN_DEN: 0.0720730, RECALL: 0.0708152, MAP: 0.0339177, MRR: 0.0659970, NDCG: 0.0501512, F1: 0.0275213, HIT_RATE: 0.1707947, ARHR: 0.0704143, NOVELTY: 0.0050192, AVERAGE_POPULARITY: 0.0841473, DIVERSITY_MEAN_INTER_LIST: 0.9689643, DIVERSITY_HERFINDAHL: 0.9968756, COVERAGE_ITEM: 0.3664293, COVERAGE_ITEM_CORRECT: 0.0181713, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0858185, DIVERSITY_GINI: 0.1140173, SHANNON_ENTROPY: 10.9250984, 
+SearchBayesianSkopt: Config 44 is suboptimal. Config: {'knn': 999, 'shrink': 2, 'similarity': 'cosine'} - results: ROC_AUC: 0.0737789, PRECISION: 0.0143657, PRECISION_RECALL_MIN_DEN: 0.0632441, RECALL: 0.0625308, MAP: 0.0265295, MRR: 0.0490889, NDCG: 0.0408094, F1: 0.0233639, HIT_RATE: 0.1436571, ARHR: 0.0531401, NOVELTY: 0.0055722, AVERAGE_POPULARITY: 0.0284804, DIVERSITY_MEAN_INTER_LIST: 0.9966494, DIVERSITY_HERFINDAHL: 0.9996435, COVERAGE_ITEM: 0.5358999, COVERAGE_ITEM_CORRECT: 0.0208277, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0712218, DIVERSITY_GINI: 0.2645443, SHANNON_ENTROPY: 12.9136529, 
+SearchBayesianSkopt: Config 45 is suboptimal. Config: {'knn': 1000, 'shrink': 1000, 'similarity': 'cosine'} - results: ROC_AUC: 0.1047876, PRECISION: 0.0201594, PRECISION_RECALL_MIN_DEN: 0.0851745, RECALL: 0.0835654, MAP: 0.0382165, MRR: 0.0746963, NDCG: 0.0573756, F1: 0.0324826, HIT_RATE: 0.2015938, ARHR: 0.0809681, NOVELTY: 0.0047297, AVERAGE_POPULARITY: 0.1365390, DIVERSITY_MEAN_INTER_LIST: 0.9708145, DIVERSITY_HERFINDAHL: 0.9970605, COVERAGE_ITEM: 0.3626564, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0985277, DIVERSITY_GINI: 0.1002629, SHANNON_ENTROPY: 10.6237908, 
+SearchBayesianSkopt: Config 46 is suboptimal. Config: {'knn': 20, 'shrink': 999, 'similarity': 'cosine'} - results: ROC_AUC: 0.1050386, PRECISION: 0.0194702, PRECISION_RECALL_MIN_DEN: 0.0817036, RECALL: 0.0801997, MAP: 0.0380552, MRR: 0.0736329, NDCG: 0.0563230, F1: 0.0313335, HIT_RATE: 0.1947017, ARHR: 0.0796210, NOVELTY: 0.0049377, AVERAGE_POPULARITY: 0.1009005, DIVERSITY_MEAN_INTER_LIST: 0.9824839, DIVERSITY_HERFINDAHL: 0.9982272, COVERAGE_ITEM: 0.4131665, COVERAGE_ITEM_CORRECT: 0.0188643, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0966402, DIVERSITY_GINI: 0.1376690, SHANNON_ENTROPY: 11.3213933, 
+SearchBayesianSkopt: Config 47 is suboptimal. Config: {'knn': 8, 'shrink': 998, 'similarity': 'cosine'} - results: ROC_AUC: 0.0983396, PRECISION: 0.0179410, PRECISION_RECALL_MIN_DEN: 0.0757521, RECALL: 0.0745026, MAP: 0.0346704, MRR: 0.0678303, NDCG: 0.0518784, F1: 0.0289182, HIT_RATE: 0.1794099, ARHR: 0.0727296, NOVELTY: 0.0049998, AVERAGE_POPULARITY: 0.0881908, DIVERSITY_MEAN_INTER_LIST: 0.9760627, DIVERSITY_HERFINDAHL: 0.9975852, COVERAGE_ITEM: 0.3860250, COVERAGE_ITEM_CORRECT: 0.0181713, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0894677, DIVERSITY_GINI: 0.1245428, SHANNON_ENTROPY: 11.1202606, 
+SearchBayesianSkopt: Config 48 is suboptimal. Config: {'knn': 987, 'shrink': 999, 'similarity': 'cosine'} - results: ROC_AUC: 0.1050807, PRECISION: 0.0201163, PRECISION_RECALL_MIN_DEN: 0.0850237, RECALL: 0.0834127, MAP: 0.0381376, MRR: 0.0745087, NDCG: 0.0572605, F1: 0.0324152, HIT_RATE: 0.2011630, ARHR: 0.0808002, NOVELTY: 0.0047306, AVERAGE_POPULARITY: 0.1363753, DIVERSITY_MEAN_INTER_LIST: 0.9709074, DIVERSITY_HERFINDAHL: 0.9970698, COVERAGE_ITEM: 0.3633109, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0984019, DIVERSITY_GINI: 0.1005537, SHANNON_ENTROPY: 10.6282978, 
+SearchBayesianSkopt: Config 49 is suboptimal. Config: {'knn': 997, 'shrink': 995, 'similarity': 'cosine'} - results: ROC_AUC: 0.1046305, PRECISION: 0.0201378, PRECISION_RECALL_MIN_DEN: 0.0852391, RECALL: 0.0836300, MAP: 0.0380998, MRR: 0.0743340, NDCG: 0.0572523, F1: 0.0324595, HIT_RATE: 0.2013784, ARHR: 0.0805591, NOVELTY: 0.0047300, AVERAGE_POPULARITY: 0.1364569, DIVERSITY_MEAN_INTER_LIST: 0.9708662, DIVERSITY_HERFINDAHL: 0.9970657, COVERAGE_ITEM: 0.3624639, COVERAGE_ITEM_CORRECT: 0.0174783, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0984019, DIVERSITY_GINI: 0.1002566, SHANNON_ENTROPY: 10.6251075, 
+SearchBayesianSkopt: Search complete. Best config is 1: {'knn': 249, 'shrink': 853, 'similarity': 'cosine'}
+SearchBayesianSkopt: Best config evaluated with evaluator_test with constructor data for final test. Config: {'knn': 249, 'shrink': 853, 'similarity': 'cosine'} - results:
+CUTOFF: 10 - ROC_AUC: 0.1333673, PRECISION: 0.0259637, PRECISION_RECALL_MIN_DEN: 0.1012238, RECALL: 0.0990901, MAP: 0.0475877, MRR: 0.0980534, NDCG: 0.0711665, F1: 0.0411462, HIT_RATE: 0.2596365, ARHR: 0.1094737, NOVELTY: 0.0047354, AVERAGE_POPULARITY: 0.1325773, DIVERSITY_MEAN_INTER_LIST: 0.9723746, DIVERSITY_HERFINDAHL: 0.9972180, COVERAGE_ITEM: 0.3845621, COVERAGE_ITEM_CORRECT: 0.0249471, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1299862, DIVERSITY_GINI: 0.1069634, SHANNON_ENTROPY: 10.7423542, 
+

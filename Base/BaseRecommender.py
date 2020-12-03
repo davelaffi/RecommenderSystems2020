@@ -16,9 +16,9 @@ class BaseRecommender(object):
 
     RECOMMENDER_NAME = "Recommender_Base_Class"
 
-    def __init__(self,URM):
+    def __init__(self):
         #super(BaseRecommender, self).__init__()
-        self.URM_train = URM
+        self.URM_train = None
         self.W_sparse = None
         self.RECS = None
 
@@ -27,6 +27,7 @@ class BaseRecommender(object):
         """
         To be implemented in child classes
         """
+        pass
 
     def get_expected_ratings(self,user_id):
         expected_ratings = self.RECS[user_id].todense()
@@ -132,7 +133,7 @@ class BaseRecommender(object):
             return ranking_list
     
     def get_URM_train(self):
-        return self.URM_train
+        return self.URM_train.copy()
 
 
     def save_model(self, folder_path, file_name = None):
