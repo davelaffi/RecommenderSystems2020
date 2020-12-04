@@ -28,7 +28,7 @@ class HybridRecommender(object):
 
         self.itemCF = ItemBasedCollaborativeFiltering(URM.copy())
         
-#         self.cbf = ContentBasedFiltering(URM.copy(), ICM.copy())
+        self.cbf = ContentBasedFiltering(URM.copy(), ICM.copy())
         
 #         self.slim_random = SLIM_BPR_Python(URM.copy())
         
@@ -37,12 +37,13 @@ class HybridRecommender(object):
 #         self.ALS = AlternatingLeastSquare(URM.copy())
     
 
-    def fit(self, user_cf_param, item_cf_param, cbf_param, slim_param, als_param, w_user, w_item):
+    def fit(self, user_cf_param, item_cf_param, cbf_param, slim_param, als_param, w_user, w_item , w_cbf):
 
         ######## Give weights to recommenders ##########
         #self.w = w
         self.w_user = w_user
         self.w_item = w_item
+        self.w_cbf = w_cbf
 
         ################################################
 
@@ -54,7 +55,7 @@ class HybridRecommender(object):
         self.itemCF.fit(knn=item_cf_param["knn"], shrink=item_cf_param["shrink"], similarity="cosine")
         
         print("Fitting cbf...")
-#         self.cbf.fit(knn=cbf_param["knn"],shrink=cbf_param["shrink"])
+        self.cbf.fit(knn=cbf_param["knn"],shrink=cbf_param["shrink"],similarity="cosine")
         
         print("Fitting slim bpr...")
 #         self.slim_random.fit(topK=slim_param["topK"],epochs=slim_param["epochs"])
@@ -69,7 +70,7 @@ class HybridRecommender(object):
     def get_expected_ratings(self, user_id) :
         self.userCF_ratings = self.userCF.get_expected_ratings(user_id)
         self.itemCF_ratings = self.itemCF.get_expected_ratings(user_id)
-#         self.cbf_ratings = self.cbf.get_expected_ratings(user_id)
+        self.cbf_ratings = self.cbf.get_expected_ratings(user_id)
 #         self.slim_ratings = self.slim_random.get_expected_ratings(user_id)
 #         self.slim_elastic_ratings = self.slim_elastic.get_expected_ratings(user_id)
 #         self.ALS_ratings = self.ALS.get_expected_ratings(user_id)
@@ -78,7 +79,7 @@ class HybridRecommender(object):
 
         self.hybrid_ratings = self.userCF_ratings * self.w_user
         self.hybrid_ratings += self.itemCF_ratings * self.w_item
-#         self.hybrid_ratings += self.cbf_ratings * self.w["cbf"]
+        self.hybrid_ratings += self.cbf_ratings * self.w_cbf
 #         self.hybrid_ratings += self.slim_ratings * self.w["slim"]
 #         self.hybrid_ratings += self.ALS_ratings * self.w["als"]
 #         self.hybrid_ratings += self.slim_elastic_ratings * self.w["elastic"]

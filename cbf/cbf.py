@@ -9,7 +9,8 @@ class ContentBasedFiltering(BaseRecommender):
     RECOMMENDER_NAME = "ContentBasedRecommender"
 
     def __init__(self,URM, ICM):
-        super(ContentBasedFiltering, self).__init__(URM)
+        #super(ContentBasedFiltering, self).__init__(URM)
+        self.URM_train = URM
         self.ICM = ICM
 
     def compute_similarity(self):
