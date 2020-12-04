@@ -1287,3 +1287,481 @@ SearchBayesianSkopt: Search complete. Best config is 1: {'knn': 249, 'shrink': 8
 SearchBayesianSkopt: Best config evaluated with evaluator_test with constructor data for final test. Config: {'knn': 249, 'shrink': 853, 'similarity': 'cosine'} - results:
 CUTOFF: 10 - ROC_AUC: 0.1333673, PRECISION: 0.0259637, PRECISION_RECALL_MIN_DEN: 0.1012238, RECALL: 0.0990901, MAP: 0.0475877, MRR: 0.0980534, NDCG: 0.0711665, F1: 0.0411462, HIT_RATE: 0.2596365, ARHR: 0.1094737, NOVELTY: 0.0047354, AVERAGE_POPULARITY: 0.1325773, DIVERSITY_MEAN_INTER_LIST: 0.9723746, DIVERSITY_HERFINDAHL: 0.9972180, COVERAGE_ITEM: 0.3845621, COVERAGE_ITEM_CORRECT: 0.0249471, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1299862, DIVERSITY_GINI: 0.1069634, SHANNON_ENTROPY: 10.7423542, 
 
+SearchBayesianSkopt: Config 0 Exception. Config: {'knn': 83, 'shrink': 5, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 1 Exception. Config: {'knn': 38, 'shrink': 13, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 2 Exception. Config: {'knn': 673, 'shrink': 774, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 3 Exception. Config: {'knn': 128, 'shrink': 408, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 4 Exception. Config: {'knn': 69, 'shrink': 812, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 5 Exception. Config: {'knn': 939, 'shrink': 775, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 6 Exception. Config: {'knn': 124, 'shrink': 551, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 7 Exception. Config: {'knn': 763, 'shrink': 20, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 8 Exception. Config: {'knn': 458, 'shrink': 807, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 9 Exception. Config: {'knn': 170, 'shrink': 988, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 10 Exception. Config: {'knn': 683, 'shrink': 958, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 11 Exception. Config: {'knn': 365, 'shrink': 26, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 12 Exception. Config: {'knn': 106, 'shrink': 789, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 13 Exception. Config: {'knn': 497, 'shrink': 835, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 14 Exception. Config: {'knn': 729, 'shrink': 89, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 15 Exception. Config: {'knn': 999, 'shrink': 33, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 16 Exception. Config: {'knn': 999, 'shrink': 979, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 17 Exception. Config: {'knn': 993, 'shrink': 7, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 18 Exception. Config: {'knn': 984, 'shrink': 982, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 19 Exception. Config: {'knn': 13, 'shrink': 993, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 20 Exception. Config: {'knn': 994, 'shrink': 3, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 21 Exception. Config: {'knn': 9, 'shrink': 4, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 22 Exception. Config: {'knn': 998, 'shrink': 983, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 23 Exception. Config: {'knn': 11, 'shrink': 3, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 24 Exception. Config: {'knn': 992, 'shrink': 5, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 25 Exception. Config: {'knn': 13, 'shrink': 995, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 26 Exception. Config: {'knn': 999, 'shrink': 1, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 27 Exception. Config: {'knn': 5, 'shrink': 989, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 28 Exception. Config: {'knn': 981, 'shrink': 999, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 29 Exception. Config: {'knn': 18, 'shrink': 1, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 30 Exception. Config: {'knn': 986, 'shrink': 998, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 31 Exception. Config: {'knn': 5, 'shrink': 992, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 32 Exception. Config: {'knn': 989, 'shrink': 4, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 33 Exception. Config: {'knn': 7, 'shrink': 21, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 34 Exception. Config: {'knn': 989, 'shrink': 985, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 35 Exception. Config: {'knn': 14, 'shrink': 7, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 36 Exception. Config: {'knn': 994, 'shrink': 6, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 37 Exception. Config: {'knn': 14, 'shrink': 994, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 38 Exception. Config: {'knn': 999, 'shrink': 976, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 39 Exception. Config: {'knn': 997, 'shrink': 4, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 40 Exception. Config: {'knn': 8, 'shrink': 3, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 41 Exception. Config: {'knn': 8, 'shrink': 992, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 42 Exception. Config: {'knn': 998, 'shrink': 988, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 43 Exception. Config: {'knn': 6, 'shrink': 7, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 44 Exception. Config: {'knn': 6, 'shrink': 999, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 45 Exception. Config: {'knn': 997, 'shrink': 3, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 46 Exception. Config: {'knn': 986, 'shrink': 1000, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 47 Exception. Config: {'knn': 1000, 'shrink': 1, 'similarity': 'cosine', 'normalize': True} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 48 Exception. Config: {'knn': 6, 'shrink': 28, 'similarity': 'cosine', 'normalize': False} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+TypeError: fit() got an unexpected keyword argument 'normalize'
+
+SearchBayesianSkopt: Config 0 Exception. Config: {'knn': 881, 'shrink': 606, 'similarity': 'euclidean'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 24, in fit
+    self.W_sparse = self.generate_similarity_matrix()
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 16, in generate_similarity_matrix
+    similarity_object = Compute_Similarity_Python(self.URM_train, topK =self.knn, shrink = self.shrink, normalize=True, similarity=self.similarity)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\Similarity\Compute_Similarity_Python.py", line 95, in __init__
+    " Passed value was '{}'".format(similarity))
+ValueError: Cosine_Similarity: value for parameter 'mode' not recognized. Allowed values are: 'cosine', 'pearson', 'adjusted', 'asymmetric', 'jaccard', 'tanimoto',dice, tversky. Passed value was 'euclidean'
+
+SearchBayesianSkopt: Config 1 Exception. Config: {'knn': 602, 'shrink': 28, 'similarity': 'euclidean'} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 267, in _evaluate_on_validation
+    recommender_instance, train_time = self._fit_model(current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 257, in _fit_model
+    **current_fit_parameters)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 24, in fit
+    self.W_sparse = self.generate_similarity_matrix()
+  File "C:\Users\davel\Desktop\ChallengeRecommender\cf\user_cf2.py", line 16, in generate_similarity_matrix
+    similarity_object = Compute_Similarity_Python(self.URM_train, topK =self.knn, shrink = self.shrink, normalize=True, similarity=self.similarity)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\Similarity\Compute_Similarity_Python.py", line 95, in __init__
+    " Passed value was '{}'".format(similarity))
+ValueError: Cosine_Similarity: value for parameter 'mode' not recognized. Allowed values are: 'cosine', 'pearson', 'adjusted', 'asymmetric', 'jaccard', 'tanimoto',dice, tversky. Passed value was 'euclidean'
+
+SearchBayesianSkopt: New best config found. Config 2: {'knn': 694, 'shrink': 813, 'similarity': 'cosine'} - results: ROC_AUC: 0.1050923, PRECISION: 0.0201163, PRECISION_RECALL_MIN_DEN: 0.0844430, RECALL: 0.0827948, MAP: 0.0385451, MRR: 0.0746893, NDCG: 0.0573714, F1: 0.0323682, HIT_RATE: 0.2011630, ARHR: 0.0811516, NOVELTY: 0.0047471, AVERAGE_POPULARITY: 0.1335990, DIVERSITY_MEAN_INTER_LIST: 0.9723570, DIVERSITY_HERFINDAHL: 0.9972148, COVERAGE_ITEM: 0.3688162, COVERAGE_ITEM_CORRECT: 0.0177863, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0973952, DIVERSITY_GINI: 0.1037180, SHANNON_ENTROPY: 10.6975284, 
+SearchBayesianSkopt: New best config found. Config 0: {'knn': 8, 'shrink': 715, 'similarity': 'tversky'} - results: ROC_AUC: 0.0982603, PRECISION: 0.0179194, PRECISION_RECALL_MIN_DEN: 0.0752502, RECALL: 0.0740013, MAP: 0.0347433, MRR: 0.0676489, NDCG: 0.0518321, F1: 0.0288523, HIT_RATE: 0.1791945, ARHR: 0.0726578, NOVELTY: 0.0049970, AVERAGE_POPULARITY: 0.0876810, DIVERSITY_MEAN_INTER_LIST: 0.9763563, DIVERSITY_HERFINDAHL: 0.9976146, COVERAGE_ITEM: 0.3860635, COVERAGE_ITEM_CORRECT: 0.0182098, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0890902, DIVERSITY_GINI: 0.1244349, SHANNON_ENTROPY: 11.1296044, 
+SearchBayesianSkopt: Best config evaluated with evaluator_test. Config: {'knn': 8, 'shrink': 715, 'similarity': 'tversky'} - results:
+CUTOFF: 10 - ROC_AUC: 0.1059003, PRECISION: 0.0193929, PRECISION_RECALL_MIN_DEN: 0.0754544, RECALL: 0.0737609, MAP: 0.0351023, MRR: 0.0760260, NDCG: 0.0532437, F1: 0.0307112, HIT_RATE: 0.1939285, ARHR: 0.0828345, NOVELTY: 0.0050090, AVERAGE_POPULARITY: 0.0858882, DIVERSITY_MEAN_INTER_LIST: 0.9753514, DIVERSITY_HERFINDAHL: 0.9975157, COVERAGE_ITEM: 0.4005390, COVERAGE_ITEM_CORRECT: 0.0215207, COVERAGE_USER: 0.6300491, COVERAGE_USER_CORRECT: 0.1019253, DIVERSITY_GINI: 0.1270597, SHANNON_ENTROPY: 11.1416546, 
+
+SearchBayesianSkopt: Config 1 is suboptimal. Config: {'knn': 617, 'shrink': 623, 'similarity': 'adjusted'} - results: ROC_AUC: 0.0007897, PRECISION: 0.0001077, PRECISION_RECALL_MIN_DEN: 0.0002788, RECALL: 0.0002603, MAP: 0.0000802, MRR: 0.0003410, NDCG: 0.0001801, F1: 0.0001524, HIT_RATE: 0.0010769, ARHR: 0.0003410, NOVELTY: 0.0054441, AVERAGE_POPULARITY: 0.0136133, DIVERSITY_MEAN_INTER_LIST: 0.3371262, DIVERSITY_HERFINDAHL: 0.9337054, COVERAGE_ITEM: 0.0048893, COVERAGE_ITEM_CORRECT: 0.0001540, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0006292, DIVERSITY_GINI: 0.0005905, SHANNON_ENTROPY: 4.1968008, 
+SearchBayesianSkopt: Config 2 is suboptimal. Config: {'knn': 839, 'shrink': 158, 'similarity': 'pearson'} - results: ROC_AUC: 0.0007897, PRECISION: 0.0001077, PRECISION_RECALL_MIN_DEN: 0.0002788, RECALL: 0.0002603, MAP: 0.0000802, MRR: 0.0003410, NDCG: 0.0001801, F1: 0.0001524, HIT_RATE: 0.0010769, ARHR: 0.0003410, NOVELTY: 0.0054441, AVERAGE_POPULARITY: 0.0136133, DIVERSITY_MEAN_INTER_LIST: 0.3371262, DIVERSITY_HERFINDAHL: 0.9337054, COVERAGE_ITEM: 0.0048893, COVERAGE_ITEM_CORRECT: 0.0001540, COVERAGE_USER: 0.5842456, COVERAGE_USER_CORRECT: 0.0006292, DIVERSITY_GINI: 0.0005905, SHANNON_ENTROPY: 4.1968008, 
