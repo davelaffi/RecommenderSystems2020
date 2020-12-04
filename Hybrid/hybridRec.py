@@ -18,17 +18,17 @@ class HybridRecommender(object):
 
     RECOMMENDER_NAME = "HybridRecommender"
 
-    def __init__(self, URM, ICM):
+    def __init__(self, URM, ICM, userCF, itemCF, cbf):
         
         self.URM_train = URM
         
         self.ICM = ICM
 
-        self.userCF = UserBasedCollaborativeFiltering(URM.copy())
+        self.userCF = userCF #UserBasedCollaborativeFiltering(URM.copy())
 
-        self.itemCF = ItemBasedCollaborativeFiltering(URM.copy())
+        self.itemCF = itemCF #ItemBasedCollaborativeFiltering(URM.copy())
         
-        self.cbf = ContentBasedFiltering(URM.copy(), ICM.copy())
+        self.cbf = cbf #ContentBasedFiltering(URM.copy(), ICM.copy())
         
 #         self.slim_random = SLIM_BPR_Python(URM.copy())
         
@@ -48,6 +48,7 @@ class HybridRecommender(object):
         ################################################
 
         ### SUB-FITTING ###
+        """
         print("Fitting user cf...")
         self.userCF.fit(knn=user_cf_param["knn"], shrink=user_cf_param["shrink"], similarity="cosine")
 
@@ -66,6 +67,7 @@ class HybridRecommender(object):
         print("Fitting ALS...")
 #         self.ALS.fit(n_factors=als_param["n_factors"], regularization=als_param["regularization"],iterations=als_param["iterations"])
 
+        """
     
     def get_expected_ratings(self, user_id) :
         self.userCF_ratings = self.userCF.get_expected_ratings(user_id)

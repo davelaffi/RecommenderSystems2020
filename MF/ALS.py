@@ -9,8 +9,11 @@ from Base.BaseRecommender import BaseRecommender
 
 class AlternatingLeastSquare(BaseRecommender):
 
+    RECOMMENDER_NAME = "AlternatingLeastSquare"
+
     def __init__(self,URM):
-        super(AlternatingLeastSquare, self).__init__(URM)
+        #super(AlternatingLeastSquare, self).__init__(URM)
+        self.URM_train = URM
 
 
     def fit(self,n_factors, regularization, iterations):

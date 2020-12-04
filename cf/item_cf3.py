@@ -23,8 +23,3 @@ class ItemBasedCollaborativeFiltering(BaseRecommender):
         self.similarity = similarity
         self.W_sparse = self.generate_similarity_matrix()
         self.RECS = self.URM_train.dot(self.W_sparse)
-
-
-
-
-    

@@ -1,0 +1,53 @@
+SearchBayesianSkopt: Config 0 Exception. Config: {'n_factors': 332, 'regularization': 0.6415236442791384, 'iterations': 49} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 272, in _evaluate_on_validation
+    result_dict, _ = self.evaluator_validation.evaluateRecommender(recommender_instance)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\Evaluation\Evaluator.py", line 245, in evaluateRecommender
+    results_dict = self._run_evaluation_on_selected_users(recommender_object, self.users_to_evaluate)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\Evaluation\Evaluator.py", line 449, in _run_evaluation_on_selected_users
+    return_scores = True
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\BaseRecommender.py", line 78, in recommend
+    scores_batch = self._compute_item_score(user_id_array, items_to_compute=items_to_compute)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\BaseRecommender.py", line 51, in _compute_item_score
+    item_scores = user_profile_array.dot(self.W_sparse).toarray()
+AttributeError: 'AlternatingLeastSquare' object has no attribute 'W_sparse'
+
+SearchBayesianSkopt: Config 0 Exception. Config: {'n_factors': 367, 'regularization': 0.7970450314461308, 'iterations': 41} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 272, in _evaluate_on_validation
+    result_dict, _ = self.evaluator_validation.evaluateRecommender(recommender_instance)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\Evaluation\Evaluator.py", line 245, in evaluateRecommender
+    results_dict = self._run_evaluation_on_selected_users(recommender_object, self.users_to_evaluate)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\Evaluation\Evaluator.py", line 449, in _run_evaluation_on_selected_users
+    return_scores = True
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\BaseRecommender.py", line 78, in recommend
+    scores_batch = self._compute_item_score(user_id_array, items_to_compute=items_to_compute)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\BaseRecommender.py", line 51, in _compute_item_score
+    item_scores = user_profile_array.dot(self.W_sparse).toarray()
+  File "C:\Users\davel\anaconda3\envs\RecSysFramework\lib\site-packages\scipy\sparse\base.py", line 364, in dot
+    return self * other
+  File "C:\Users\davel\anaconda3\envs\RecSysFramework\lib\site-packages\scipy\sparse\base.py", line 481, in __mul__
+    raise ValueError('dimension mismatch')
+ValueError: dimension mismatch
+
+SearchBayesianSkopt: Config 0 Exception. Config: {'n_factors': 138, 'regularization': 0.4450306306443862, 'iterations': 17} - Exception: Traceback (most recent call last):
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 362, in _objective_function
+    result_dict, result_string, recommender_instance, train_time, evaluation_time = self._evaluate_on_validation(current_fit_parameters_dict)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\ParameterTuning\SearchAbstractClass.py", line 272, in _evaluate_on_validation
+    result_dict, _ = self.evaluator_validation.evaluateRecommender(recommender_instance)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\Evaluation\Evaluator.py", line 245, in evaluateRecommender
+    results_dict = self._run_evaluation_on_selected_users(recommender_object, self.users_to_evaluate)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\Evaluation\Evaluator.py", line 449, in _run_evaluation_on_selected_users
+    return_scores = True
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\BaseRecommender.py", line 78, in recommend
+    scores_batch = self._compute_item_score(user_id_array, items_to_compute=items_to_compute)
+  File "C:\Users\davel\Desktop\ChallengeRecommender\Base\BaseRecommender.py", line 51, in _compute_item_score
+    item_scores = user_profile_array.dot(self.W_sparse).toarray()
+  File "C:\Users\davel\anaconda3\envs\RecSysFramework\lib\site-packages\scipy\sparse\base.py", line 364, in dot
+    return self * other
+  File "C:\Users\davel\anaconda3\envs\RecSysFramework\lib\site-packages\scipy\sparse\base.py", line 518, in __mul__
+    raise ValueError('dimension mismatch')
+ValueError: dimension mismatch
+
