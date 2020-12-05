@@ -92,6 +92,8 @@ class Incremental_Training_Early_Stopping(object):
                                    validation_every_n = None, stop_on_validation = False,
                                    validation_metric = None, lower_validations_allowed = None, evaluator_object = None,
                                    algorithm_name = "Incremental_Training_Early_Stopping"):
+
+        
         """
 
         :param epochs_max:                  max number of epochs the training will last

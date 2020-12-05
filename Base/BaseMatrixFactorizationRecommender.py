@@ -1,8 +1,5 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
 """
 Created on 16/09/2017
-
 @author: Maurizio Ferrari Dacrema
 """
 
@@ -16,13 +13,13 @@ class BaseMatrixFactorizationRecommender(BaseRecommender):
     """
     This class refers to a BaseRecommender KNN which uses matrix factorization,
     it provides functions to compute item's score as well as a function to save the W_matrix
-
     The prediction for cold users will always be -inf for ALL items
     """
 
-    def __init__(self, URM_train, verbose=True):
-        super(BaseMatrixFactorizationRecommender, self).__init__(URM_train, verbose=verbose)
+    def __init__(self):
+        #super(BaseMatrixFactorizationRecommender, self).__init__(URM_train, verbose=verbose)
 
+        self.URM_train = None
         self.use_bias = False
 
     #########################################################################################################
@@ -36,9 +33,7 @@ class BaseMatrixFactorizationRecommender(BaseRecommender):
         """
         USER_factors is n_users x n_factors
         ITEM_factors is n_items x n_factors
-
         The prediction for cold users will always be -inf for ALL items
-
         :param user_id_array:
         :param items_to_compute:
         :return:
@@ -65,6 +60,11 @@ class BaseMatrixFactorizationRecommender(BaseRecommender):
             item_scores = (item_scores.T + self.USER_bias[user_id_array]).T
 
         return item_scores
+    
+    #Added Dave
+    def get_expected_ratings(self,user_id):
+        expected_ratings = np.dot(self.USER_factors[user_id], self.ITEM_factors.T)
+        return np.squeeze(np.asarray(expected_ratings))
 
 
     #########################################################################################################
