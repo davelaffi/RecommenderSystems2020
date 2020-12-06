@@ -12,7 +12,8 @@ class SlimBPRRec(BaseRecommender):
     RECOMMENDER_NAME = "SlimBPRRecommender"
     
     def __init__(self,URM):
-        super(SlimBPRRec, self).__init__(URM)
+        #super(SlimBPRRec, self).__init__(URM)
+        self.URM_train = URM
 
     def fit(self,learning_rate, epochs, nnz, knn):
 
