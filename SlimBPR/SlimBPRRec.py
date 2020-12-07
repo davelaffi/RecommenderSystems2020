@@ -15,21 +15,21 @@ class SlimBPRRec(BaseRecommender):
         #super(SlimBPRRec, self).__init__(URM)
         self.URM_train = URM
 
-    def fit(self,learning_rate, epochs, nnz, knn):
+    def fit(self,learning_rate,nnz, knn):
 
         self.learning_rate = learning_rate
-        self.epochs = epochs
+        self.epochs = 20
         self.positive_item_regularization = 1.0
         self.negative_item_regularization = 1.0
         self.nnz = nnz
         self.knn = knn
         
         # Compute similarity matrix
-        self.SlimSimilarity = SlimBPR(self.URM_train,
+        self.W_sparse = SlimBPR(self.URM_train,
                             self.learning_rate,
                             self.epochs,
                             self.positive_item_regularization,
                             self.negative_item_regularization,
                             self.nnz).get_S_SLIM_BPR(self.knn)
         
-        self.RECS = self.URM_train.dot(self.SlimSimilarity)
+        self.RECS = self.URM_train.dot(self.W_sparse)
