@@ -15,9 +15,9 @@ class SlimBPRRec(BaseRecommender):
         #super(SlimBPRRec, self).__init__(URM)
         self.URM_train = URM
 
-    def fit(self,learning_rate,nnz, knn):
+    def fit(self,nnz, knn):
 
-        self.learning_rate = learning_rate
+        self.learning_rate = 0.00214168231523243
         self.epochs = 20
         self.positive_item_regularization = 1.0
         self.negative_item_regularization = 1.0
