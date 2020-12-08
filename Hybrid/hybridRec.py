@@ -18,7 +18,7 @@ class HybridRecommender(object):
 
     RECOMMENDER_NAME = "HybridRecommender"
 
-    def __init__(self, URM, ICM, userCF, itemCF, cbf, als):
+    def __init__(self, URM, ICM, userCF, itemCF, cbf, als, slim_bpr):
         
         self.URM_train = URM
         
@@ -30,14 +30,14 @@ class HybridRecommender(object):
         
         self.cbf = cbf #ContentBasedFiltering(URM.copy(), ICM.copy())
         
-#         self.slim_random = SLIMbpr
+        self.slim_bpr = slim_bpr
         
 #         self.slim_elastic = SLIMelastic
         
         self.ALS = als
     
 
-    def fit(self, user_cf_param, item_cf_param, cbf_param, slim_param, als_param, w_user, w_item , w_cbf, w_als):
+    def fit(self, user_cf_param, item_cf_param, cbf_param, slim_param, als_param, w_user, w_item , w_cbf, w_als, w_slim_bpr):
 
         ######## Give weights to recommenders ##########
         #self.w = w
@@ -45,6 +45,7 @@ class HybridRecommender(object):
         self.w_item = w_item
         self.w_cbf = w_cbf
         self.w_als = w_als
+        self.w_slim_bpr = w_slim_bpr
 
         ################################################
 
@@ -74,7 +75,7 @@ class HybridRecommender(object):
         self.userCF_ratings = self.userCF.get_expected_ratings(user_id)
         self.itemCF_ratings = self.itemCF.get_expected_ratings(user_id)
         self.cbf_ratings = self.cbf.get_expected_ratings(user_id)
-#         self.slim_ratings = self.slim_random.get_expected_ratings(user_id)
+        self.slim_bpr_ratings = self.slim_bpr.get_expected_ratings(user_id)
 #         self.slim_elastic_ratings = self.slim_elastic.get_expected_ratings(user_id)
         self.ALS_ratings = self.ALS.get_expected_ratings(user_id)
 
@@ -83,7 +84,7 @@ class HybridRecommender(object):
         self.hybrid_ratings = self.userCF_ratings * self.w_user
         self.hybrid_ratings += self.itemCF_ratings * self.w_item
         self.hybrid_ratings += self.cbf_ratings * self.w_cbf
-#         self.hybrid_ratings += self.slim_ratings * self.w["slim"]
+        self.hybrid_ratings += self.slim_bpr_ratings * self.w_slim_bpr
         self.hybrid_ratings += self.ALS_ratings * self.w_als
 #         self.hybrid_ratings += self.slim_elastic_ratings * self.w["elastic"]
 
