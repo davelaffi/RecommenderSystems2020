@@ -224,13 +224,6 @@ def reshapeSparse(sparseMatrix, newShape):
     return newMatrix
 
 
-
-
-
-
-
-
-
 def get_unique_temp_folder(input_temp_folder_path):
     """
     The function returns the path of a folder in result_experiments

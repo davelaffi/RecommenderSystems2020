@@ -9,6 +9,7 @@ import numpy as np
 from Base.DataIO import DataIO
 import os
 from Base.Recommender_utils import check_matrix
+import scipy.sparse as sp
 
 
 class BaseRecommender(object):
@@ -152,3 +153,23 @@ class BaseRecommender(object):
 
     def _print(self, string):
         print("{}: {}".format(self.RECOMMENDER_NAME, string))
+
+    
+    def recommend2(self,user_id,urm_train: sp.csr_matrix,at=10):
+     
+        expected_ratings = self.get_expected_ratings(user_id)
+        
+        recommended_items = np.flip(np.argsort(expected_ratings), 0)
+
+        # REMOVING SEEN
+        unseen_items_mask = np.in1d(recommended_items,urm_train[user_id].indices,
+                                    assume_unique=True, invert=True)
+        recommended_items = recommended_items[unseen_items_mask]
+
+        return recommended_items[0:at]
+
+
+
+
+
+

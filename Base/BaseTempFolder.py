@@ -1,12 +1,4 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on 19/06/2019
 
-@author: Maurizio Ferrari Dacrema
-"""
-
-from Base.Recommender_utils import get_unique_temp_folder
 import os, shutil
 
 

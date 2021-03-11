@@ -1,0 +1,1 @@
+bestKnn: 605 bestShrink: 35 best MAP: 0.05114215324905293bestKnn: 207 bestShrink: 2 best MAP: 0.055300665604014684

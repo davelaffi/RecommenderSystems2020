@@ -14,22 +14,25 @@ class SlimBPRRec(BaseRecommender):
     def __init__(self,URM):
         #super(SlimBPRRec, self).__init__(URM)
         self.URM_train = URM
+        self.similarity = None
 
-    def fit(self,nnz, knn):
+    def fit(self,learning_rate, nnz):
 
-        self.learning_rate = 0.00214168231523243
+        self.learning_rate = learning_rate
         self.epochs = 20
         self.positive_item_regularization = 1.0
         self.negative_item_regularization = 1.0
         self.nnz = nnz
-        self.knn = knn
         
         # Compute similarity matrix
-        self.W_sparse = SlimBPR(self.URM_train,
-                            self.learning_rate,
-                            self.epochs,
-                            self.positive_item_regularization,
-                            self.negative_item_regularization,
-                            self.nnz).get_S_SLIM_BPR(self.knn)
-        
+        self.similarity = SlimBPR(self.URM_train,
+                                    self.learning_rate,
+                                    self.epochs,
+                                    self.positive_item_regularization,
+                                    self.negative_item_regularization,
+                                    self.nnz).get_S_SLIM_BPR()
+            
+    def getSimilarity(self, knn) :
+        self.knn = knn
+        self.W_sparse = SlimBPR.getBestKnn(self, knn, self.similarity)
         self.RECS = self.URM_train.dot(self.W_sparse)

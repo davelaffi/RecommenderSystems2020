@@ -83,15 +83,22 @@ class SlimBPR(object):
             self.similarity_matrix[positive_item_id, positive_item_id] = 0
             self.similarity_matrix[negative_item_id, negative_item_id] = 0
 
-    def get_S_SLIM_BPR(self, knn):
+    def get_S_SLIM_BPR(self):
         print('Get S SLIM BPR...')
 
         for numEpoch in range(self.epochs):
             print('Epoch:', numEpoch)
             self.epochIteration()
 
+        return self.similarity_matrix
+
+    def getSimilarityMatrix(self) :
+        return self.similarity_matrix
+
+    def getBestKnn(self, knn, similarity) :
+
         print('Keeping only knn =', knn, '...')
-        similarity_matrix_csr = self.similarity_matrix.tocsr()
+        similarity_matrix_csr = similarity.tocsr()
 
         for r in tqdm(range(0, similarity_matrix_csr.shape[0])):
             indices = similarity_matrix_csr[r, :].data.argsort()[:-knn]

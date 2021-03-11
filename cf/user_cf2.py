@@ -13,7 +13,7 @@ class UserBasedCollaborativeFiltering(BaseRecommender):
 
 
     def generate_similarity_matrix(self):
-        similarity_object = Compute_Similarity_Python(self.URM_train, topK =self.knn, shrink = self.shrink, normalize=True, similarity=self.similarity)
+        similarity_object = Compute_Similarity_Python(self.URM_train.transpose(), topK =self.knn, shrink = self.shrink, normalize=True, similarity=self.similarity)
         return similarity_object.compute_similarity()
 
     def fit(self,knn, shrink, similarity):
@@ -22,7 +22,7 @@ class UserBasedCollaborativeFiltering(BaseRecommender):
         self.shrink = shrink
         self.similarity = similarity
         self.W_sparse = self.generate_similarity_matrix()
-        self.RECS = self.URM_train.dot(self.W_sparse)
+        self.RECS = self.W_sparse.dot(self.URM_train)
         
 
     
